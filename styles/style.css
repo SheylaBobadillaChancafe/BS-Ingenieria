@@ -126,8 +126,131 @@ header {
 }
 
 
+
+/* Footer*/
+
+.footer {
+    background-color: #000000;
+    padding: 2% 15% ;
+    color: #ffffff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer_logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+
+}
+.footer_logo img{
+    width: 4.375rem;
+    height: 3.75rem;
+
+}
+
+.footer_logo p{
+    font-size: 1.125rem;
+    font-family: var(--fuente-monstserrat);
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_contacto .contacto_principal{
+    font-size: 1.125rem ;
+    font-family: var(--fuente-monstserrat);
+    color: #fcf8f8;
+}
+
+.footer_contacto p{
+    font-size: 0.875rem;
+    font-family: var(--fuente-monstserrat); 
+    color: #C6C7CB;
+}
+
+
+.footer_redes p{
+  
+    font-size: 1.06rem ;
+    font-family: var(--fuente-monstserrat);
+    color: #fcf8f8;
+}
+
+
+.redes_img {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.redes_img img{
+    width: 1.875rem;
+    height: 1.75rem;
+
+}
+
+.footer_line {
+    background-color: #ffffff; 
+    margin: 0.05rem ;  
+}
+
+.footer_copyright {
+
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    background-color: #000000;
+  
+}
+
+.footer_copyright p{
+  
+    font-size: 0.8rem ;
+    font-family: var(--fuente-monstserrat);
+    color: #fcfcfc;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Estilos generales */
 @media (max-width: 1280px) {
+
     /* Logo en pantallas pequeñas */
     .header {
         gap: 2rem; /* Espaciado entre logo y navegación */
@@ -163,7 +286,76 @@ header {
         font-size: 1rem;  /* Texto más pequeño */
         padding: 0.1rem;  /* Espaciado mayor para hacer clic fácil */
     }
+
+    /*Footer*/
+    .footer {
+        padding: 2% 10%;
+    }
+
+    .footer_logo {
+        gap: 1rem;
+    }
+
+    .footer_logo img {
+        width: 3.75rem;
+        height: 3.25rem;
+    }
+
+    .footer_logo p {
+        font-size: 1rem;
+    }
+
+    .footer_contacto .contacto_principal {
+        font-size: 1rem;
+    }
+
+    .footer_contacto p {
+        font-size: 0.9rem;
+    }
+
+    .footer_redes p {
+        font-size: 1rem;
+    }
+
+    .redes_img img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .footer_copyright p {
+        font-size: 0.75rem;
+    }
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Estilos en pantallas muy pequeñas */
 @media (max-width: 810px) {
@@ -261,6 +453,63 @@ header {
     .menu.show {
         display: flex;
     }
+
+
+    .footer {
+        padding: 2% 5%;
+        flex-direction: column;
+        align-items:center; /* Centra los elementos en pantallas pequeñas */
+        justify-items: flex-start;
+    }
+
+    .footer_logo {
+        gap: 1rem;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    .footer_logo img {
+        width: 3rem;
+        height: 2.5rem;
+    }
+
+    .footer_logo p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .footer_contacto .contacto_principal {
+        font-size: 1rem;
+    }
+
+    .footer_contacto p {
+        font-size: 0.85rem;
+    }
+
+    .footer_redes p {
+        font-size: 1rem;
+    }
+
+    .redes_img {
+        justify-content: center;
+    }
+
+    .redes_img img {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .footer_copyright p {
+        font-size: 0.75rem;
+    }
+
+    .footer_line {
+        width: 80%;
+    }
+
+
+
+
 }
 
 /* Mostrar el menú desplegable cuando se hace clic en el ícono */
