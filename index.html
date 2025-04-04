@@ -14,21 +14,24 @@
     <meta property="og:type" content="website">
 
     <title>BS Casas Ingeniería </title>
-    <link rel="stylesheet" href=".\styles\style.css">
+    <link rel="stylesheet" href=".\styles\style01.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
-
 <body>
-
+    
     <header class="header">
         <div class="logo">
-            <img src="img\logo.png" alt="BS Casas Ingenieria">
-            <h1><span class="azul">BS CASAS</span> <span class="gris">INGENIERIA</span></span></h1>
+            <img src="img/logo.png" alt="BS Casas Ingenieria">
+            <h1><span class="azul">BS CASAS</span> <span class="gris">INGENIERIA</span></h1>
         </div>
-
+    
         <nav class="nav">
-           <ul class="menu">
+            <!-- Icono de menú hamburguesa solo se mostrará en pantallas pequeñas -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i> 
+            </div>
+            
+            <ul class="menu">
                 <li><a href="index.html">INICIO</a></li>
                 <li><a href="nosotros.html">NOSOTROS</a></li>
                 <li><a href="servicios.html">SERVICIOS</a></li>
@@ -36,93 +39,15 @@
                 <li><a class="contacto" href="contactanos.html">CONTACTO</a></li>
             </ul>
         </nav>
-
     </header>
-
-    <a href="https://wa.me/51987348510" target="_blank" id="whatsapp-icon">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <main >
-        <section class="container1">
-            <img src="img\foto1.png" alt="Imagen de construcción de BS Casas Ingenieria">
-            <div class="text-overlay">
-                <strong>Construimos con solidez, garantizamos tu futuro.</strong>
-            </div>
-            <div class="highlight-text">
-                <p><a href="servicios.html">Conoce nuestro servicios</a></p>
-            </div>
-        </section>
-
-        
-        <section class="container2">
-            <img src="img\edificio01.png" alt="edificio01" class="imgedificio01">
-            
-            <div class="container-verde">
-                <h2>Seguridad e innovación en cada proyecto</h2>
-           </div>
-            
-            <div class="text-container">
-            
-                <p>En BS Casas Ingeniería, somos expertos en diseño y construcción, 
-                    ofreciendo la mejor calidad en cada uno de nuestros proyectos. 
-                    Diseñamos soluciones sólidas, seguras y funcionales, siempre con visión de futuro. 
-                    Nos comprometemos a superar tus expectativas y asegurar el éxito de tu inversión. 
-                    ¡Contáctanos y construyamos juntos el futuro!</p>        
-            </div>
-        </section>
-
-        <section class="container3">
-
-            <div class="imgcontacto">
-                <img src="img\edificio02.png" alt="Imagen de Edificio02" class="img-edificio02">    
-                <img src="img\edificio03.png" alt="Imagen de Edificio03" class="img-edificio03">           
-            </div> 
-
-            <div class="contenedor"> 
-                <h3>Contáctanos</h3>
-                <p>Sabemos lo que necesitas </p>
-                <a href="contactanos.html" class="enviar-mensaje">Enviar un Mensaje</a>
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <footer >
-        <section class="footer" >
-                <div class="footer_logo">
-                    <img src="img\logo.png" alt="BS Casas Ingenieria">
-                    <p><span class="azul">BS CASAS</span> <span class="gris">INGENIERIA</span></span></p>
-                </div>
-
-                <div class="footer_contacto">
-                    <p class="contacto_principal">Contacto</p>
-                    <p>Calle Lima 240, Ciudad Eten,Chiclayo</p>
-                    <p>bscasas.ingenieria@gmail.com</p>
-                    <p>+51 917 805 715</p>
-                </div>
-
-                <div class="footer_redes">
-                    <p >Redes Sociales</p>
-                    <div class="redes_img">
-                    <a href="https://www.facebook.com/" target="_blank"><img src="img\facebook.png" alt="Facebook" ></a> 
-                    <a href="https://www.instagram.com/" target="_blank"><img src="img\ig.png" alt="Instagram"></a> 
-                    <a href="https://www.linkedin.com/home" target="_blank"><img src="img\linkdIn.png" alt="LinkedIn"></a> 
-                    </div>
-                </div>
-        </section>
-    
-        <div class="footer_line"></div>
-        <div class="footer_copyright">
-            <p>&copy; 2025 Todos los derechos reservados</p>
-        </div>
-        
-       
-    </footer>
     
     
+
+
+
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>

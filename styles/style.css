@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patua+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -6,7 +7,6 @@
 :root{
     --fuente-monstserrat: "Montserrat", sans-serif;
     --fuente-philosopher: "Philosopher", sans-serif;
-
 }
 
 *:not(.footer *) {
@@ -17,9 +17,8 @@
 }
 
 
-/* Header*/
-
-header{
+/* Header */
+header {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -30,57 +29,56 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5% 8%;
-    background-color: #efefef;
-
+    padding: 2.5% 10%;
+    background-color: #FFFFFF;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 10px;
 }
 
-.logo img{
-    width: 12%;
-    height: 0.4%;
-
+.logo img {
+    width: 3.75rem;  /* Usamos rem para el tamaño del logo */
+    height: 3.125rem; /* Usamos rem para el tamaño del logo */
 }
-.logo h1{
-    font-size: 1.4rem;
+
+.logo h1 {
+    font-size: 1.3rem;  /* Usamos rem para ajustar el tamaño del texto */
     font-family: var(--fuente-monstserrat);
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-.azul  {
+.azul {
     color: #04AAB6;
-    
 }
-.gris   {
+
+.gris {
     color: #A2A2A2;
 }
 
-.nav .menu  {
+/* Estilos para el menú */
+.nav .menu {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 2rem;  /* Usamos rem para espaciar los elementos */
     margin: 0;
     padding: 0;
 }
 
-.menu li a:not(.contacto){
+.menu li a:not(.contacto) {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.0625rem;  /* Usamos rem para ajustar el tamaño del texto */
     font-family: var(--fuente-monstserrat);
     transition: color 0.5s ease, border-bottom 0.3s ease; 
     position: relative;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.25rem;  /* Usamos rem para el padding */
 }
-
 
 .menu li a:not(.contacto)::after {
     content: '';
@@ -88,353 +86,184 @@ header{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 0.125rem;  /* Usamos rem para el grosor */
     background-color: #A2A2A2;
-    transform: scalex(0);
+    transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease;
 }
 
-
-.menu li a:hover::after{
+.menu li a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
 .menu .contacto {
     text-decoration: none;
     background-color: #04AAB6;
     color: #FFFFFF;
-    padding: 0.625rem 1.25rem;
+    padding: 0.625rem 1.25rem;  /* Usamos rem para el padding */
     border-radius: 20px;
     transition: all 0.3s ease;
     font-family: var(--fuente-monstserrat);
-    font-size: 1.2rem;
 }
 
-.menu .contacto:hover{
+.menu .contacto:hover {
     background-color: #000000;
     transform: scale(1.1);
-      font-family: var(--fuente-monstserrat);
+    font-family: var(--fuente-monstserrat);
 }
 
-
-/* Main*/
-
-#whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366; 
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    z-index: 9999; 
+/* Estilos para el ícono de hamburguesa y menú en pantallas pequeñas */
+.menu-toggle {
+    display: none;  /* Por defecto no se muestra en pantallas grandes */
+    cursor: pointer;
 }
 
-#whatsapp-icon:hover {
-    transform: scale(1.1);
-}
-
-/*Section 1 - Container1 */
-
-.container1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 0;
-    width: 100%;
-    height: 70vh;
-}
-
-.container1 img{
-    width: 100%;
-    height: 140%;
-
-}
-
-.text-overlay {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    background-color:  rgba(51, 51, 51, 0.56);
-    padding: 20px;
-    border-radius: 10px;
-    font-family: var(--fuente-philosopher);
-    font-size: 2.5rem;
-    font-style: italic; 
-}
-
-.highlight-text {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    background-color: rgba(51, 51, 51, 0.6);
-    padding: 15px 30px;
-    border-radius: 10px;
-    margin-top: 80px;
-    font-family: var(--fuente-philosopher);
-    font-size: 1.8rem; 
-    transition: background-color 0.3s, color 0.3s; 
-}
-
-.highlight-text a {
-    color: white;
-    text-decoration: none;
-}
-
-.highlight-text:hover {
-    background-color:  #000000;
-   
-}
-
- /*Seccion 2 - Container2*/
-
-.container2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 60vh;
-    padding: 0 2%;
-    position: relative;
-
-}
-
-.imgedificio01 {
-    width: 30%;
-    height: 130%;
-    object-fit: cover;
-    margin-left: 8%;
-    margin-top: 40%;
-    border-radius: 10px;
-    z-index:1;
-}
-
-.container-verde {
-    position: absolute;
-    top: 60%;
-    width: 95%;
-    height: 23%;
-    background-color: #04AAB6;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 5%;
-   
-}
-
-
-h2{
-    color: #FFFFFF;
-    font-size: 2.5rem;
-    font-family: var(--fuente-philosopher);
-}
-
-.text-container {
-    width: 45%;
-    margin-right: 8.5%;
-    margin-top: 50%;
-}
-
-.text-container p{
-    font-family: var(--fuente-philosopher);
-    font-size: 1.65rem;
-    line-height: 1.9;
-    text-align: justify;
-}
-
-
-
-/*Section3*/
-
-.container3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
-    align-items: center;
-    margin-top: 28%;  
-    margin-bottom: -4%;
-    padding: 3.12rem 1.25rem;
-    width: 100%;
-    height: 85vh;
-    position: relative;
-}
-
-.imgcontacto {
-    width: 100%;  
-    position: absolute;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    top: 1.3%;
-
-}
-
-.img-edificio02 {
-    width: 23%;
-    height: 70vh;
-    z-index:1;
-    left: calc(20px + 7.7%);
-    position: relative;
-    bottom: 0;
-    
-}
-
-.img-edificio03 {
-    width: 20%;
-    height: 60vh;
-    z-index:1;
-    left: calc(20px + 46.6%);
-    position: relative;
-    bottom: 0;
-}
-
-.contenedor {
-    display: flex;
-    flex-direction: column;  
-    justify-content: center; 
-    align-items: center; 
-    width: 84%;  
-    height: 80%;
-    background-image: radial-gradient(circle, #C6C7CB, #A1A2A9);
-
-    text-align: center;
-    border-radius: 10px;  
-    box-sizing: border-box; 
-    gap: 2rem;
-}
-
-h3 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    font-family: var(--fuente-philosopher);
-   
-}
-
-p {
-    font-size: 2rem;
-    color: #3d3a3a;
-    font-family: var(--fuente-philosopher);
-    font-weight: bold;
-
-}
-
-.enviar-mensaje {
-    display: inline-block;
-    background-color: #fff;
+.menu-toggle i {
+    font-size: 2rem;  /* Tamaño del ícono */
     color: #000;
-    font-family: var(--fuente-philosopher);
-    font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 15px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border: 2px solid #baafaf;
-    z-index: 10;
-}
-
-.enviar-mensaje:hover {
-    background-color: #000000;
-    color: #FFFFFF;
 }
 
 
-/* Footer*/
+/* Estilos generales */
+@media (max-width: 1280px) {
+    /* Logo en pantallas pequeñas */
+    .header {
+        gap: 2rem; /* Espaciado entre logo y navegación */
+    }
 
-.footer {
-    background-color: #000000;
-    padding: 2% 15% ;
-    color: #ffffff;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    .logo {
+        gap: 0.5rem;
+        margin-left: -2rem; /* Puedes ajustar este valor si necesitas mover más a la izquierda */
+        margin-top: 0.5rem;
+    }
+
+    .logo img {
+        width: 3.4rem; /* Logo más pequeño en pantallas pequeñas */
+        height: 3rem;
+    }
+
+    .logo h1 {
+        padding-top: 0.7rem;
+        font-size: 1rem;  /* Texto más pequeño en pantallas pequeñas */
+    }
+
+    /* Ajustes a la navegación */
+    .nav {
+        padding-top: 2rem;
+        margin-right: 0; /* Elimina el margen negativo que podría generar un desplazamiento */
+    }
+
+    .nav .menu {
+        gap: 1rem;
+    }
+
+    .menu li a:not(.contacto) {
+        font-size: 1rem;  /* Texto más pequeño */
+        padding: 0.1rem;  /* Espaciado mayor para hacer clic fácil */
+    }
 }
 
-.footer_logo{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding-top: 1rem;
+/* Estilos en pantallas muy pequeñas */
+@media (max-width: 810px) {
+    /* Logo */
+    .logo {
+        padding: 1rem;
+        gap: 0.5rem;
+        /* margin-left: 0.005rem; */
+    }
 
+    .logo img {
+        width: 3.2rem; /* Logo más pequeño en pantallas pequeñas */
+        height: 2.8rem;
+    }
+
+    .logo h1 {
+        padding-top: 0.7rem;
+        font-size: 0.9rem;  /* Texto más pequeño en pantallas pequeñas */
+    }
+
+    /* Estilos para la barra de menú */
+    .nav {
+        padding-top: 1rem;
+       
+    }
+    .nav .menu {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        height: 20%;
+        top: 110px;
+        right: -71%;  /* Ajusta el valor para asegurarte que el menú no quede fuera de la pantalla */
+        transition: all;
+        padding-left: 0.1rem;
+    }
+
+    .nav .menu li a {
+        font-size: 0.8rem;  /* Texto más pequeño */
+        padding: 0.1rem;  /* Espaciado mayor para hacer clic fácil */
+        background-color: transparent;
+        width: 100%;
+        text-align: right;
+        color: #000000;
+    }
+
+    /* Estilo de "CONTACTO" */
+    .menu .contacto {
+        background-color: transparent;
+        color: #000000;
+        padding: 0;
+        border-radius: 0;
+        font-weight: bold;
+        font-size: 1.0625rem;
+        transition: color 0.5s ease, border-bottom 0.3s ease;
+        position: relative;
+        padding-bottom: 0.25rem;
+    }
+
+    .menu .contacto::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.125rem;
+        background-color: #A2A2A2;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+
+    .menu .contacto:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .menu .contacto:hover {
+        background-color: transparent;
+        transform: none;
+    }
+
+    /* Estilos para el ícono de menú hamburguesa */
+    .nav .menu-toggle {
+        display: block;
+        padding-top: 0.6rem;
+        padding-right: 2.5rem;
+    }
+
+    .menu-toggle i {
+        font-size: 2rem;
+    }
+
+    .menu.show {
+        display: flex;
+    }
 }
-.footer_logo img{
-    width: 4.375rem;
-    height: 3.75rem;
 
-}
-
-.footer_logo p{
-    font-size: 1.125rem;
-    font-family: var(--fuente-monstserrat);
-    font-weight: bold;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.footer_contacto .contacto_principal{
-    font-size: 1.125rem ;
-    font-family: var(--fuente-monstserrat);
-    color: #fcf8f8;
-}
-
-.footer_contacto p{
-    font-size: 0.875rem;
-    font-family: var(--fuente-monstserrat); 
-    color: #C6C7CB;
-}
-
-
-.footer_redes p{
-  
-    font-size: 1.06rem ;
-    font-family: var(--fuente-monstserrat);
-    color: #fcf8f8;
-}
-
-
-.redes_img {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-}
-
-.redes_img img{
-    width: 1.875rem;
-    height: 1.75rem;
-
-}
-
-.footer_line {
-    background-color: #ffffff; 
-    margin: 0.05rem ;  
-}
-
-.footer_copyright {
-
-    width: 100%;
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
-    background-color: #000000;
-  
-}
-
-.footer_copyright p{
-  
-    font-size: 0.8rem ;
-    font-family: var(--fuente-monstserrat);
-    color: #fcfcfc;
-    text-align: center;
+/* Mostrar el menú desplegable cuando se hace clic en el ícono */
+.show {
+    display: flex !important;
 }
