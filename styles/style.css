@@ -36,12 +36,14 @@ header {
     justify-content: space-between;
     padding: 1.5% 10%;
     background-color: #FFFFFF;
+    flex-wrap: wrap;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .logo img {
@@ -142,21 +144,24 @@ header {
 
 .footer {
     background-color:var(--color-negro);
-    padding: 2% 10% ;
+    padding: 2% 15% ;
     color:var(--color-blanco);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;   
 
 
 }
+
 
 .footer_logo{
     display: flex;
     align-items: center;
     gap: 1rem;
     padding-top: 0.4rem;
+    flex-wrap: wrap;
 
 }
 .footer_logo img{
@@ -173,20 +178,37 @@ header {
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
+
+    
+}
+
+.footer_contacto{
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    
 }
 
 .contacto_principal{
     font-size: 1.1rem ;
     font-family: var(--fuente-monstserrat);
     color:var(--color-blanco);
+    margin-bottom: 0.3rem;
    
 }
 
 .footer_contacto p:not(.contacto_principal){
+
     font-size: 0.9rem;
     font-family: var(--fuente-monstserrat); 
     color:var(--color-secundario);
+    margin-bottom: 0.3rem;
+    
+    
 }
+
 
 
 .footer_redes p{
@@ -200,6 +222,7 @@ header {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
 
 }
 
@@ -218,7 +241,7 @@ header {
 
     width: 100%;
     display: flex;
-    padding: 2rem;
+    padding: 1.5rem;
     justify-content: center;
     background-color: var(--color-negro);
   
@@ -242,9 +265,9 @@ header {
     /* Logo */
 
 
-        .logo h1 {
+    .logo h1 {
             font-size: 1.1rem;  /* Texto más pequeño en pantallas pequeñas */
-        }
+    }
     
     /* Estilos para la barra de menú */
 
@@ -256,7 +279,7 @@ header {
       
     }
     .nav .menu {
-        background-color: var(--color-secundario);  /* Fondo blanco elegante */
+        background-color: var(--color-blanco);  /* Fondo blanco elegante */
         display: none;  /* Inicialmente oculto */
         position: absolute;
         margin-top: 2.5%;
@@ -268,7 +291,7 @@ header {
         align-items: center;
         gap: 2rem;  /* Espaciado entre los elementos */
         width: 100%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);  /* Sombra ligera */
         z-index: 1000;
         max-height: 0;  /* Iniciar con el menú colapsado */
         overflow: hidden;  /* Esconde el contenido que sobrepase el tamaño */
@@ -290,10 +313,10 @@ header {
 
     .menu.show {
        
-  display: flex;
+    display: flex;
     max-height: 500px;  /* Ajusta este valor para permitir que el menú se expanda completamente */
     opacity: 1;  /* El menú es visible */
-        
+    } 
 
 
     /*Footer*/
@@ -301,9 +324,8 @@ header {
         padding: 5% 15%;
         width: auto;
    
-
     }
-
+ 
    
 }
 
