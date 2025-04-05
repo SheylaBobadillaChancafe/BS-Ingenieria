@@ -7,6 +7,11 @@
 :root{
     --fuente-monstserrat: "Montserrat", sans-serif;
     --fuente-philosopher: "Philosopher", sans-serif;
+    --color-principal: #04AAB6;
+    --color-secundario: #A2A2A2;
+    --color-blanco:#FFFFFF;
+    --color-negro:#000000;
+ 
 }
 
 *:not(.footer *) {
@@ -29,7 +34,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.5% 10%;
+    padding: 1.5% 10%;
     background-color: #FFFFFF;
 }
 
@@ -40,44 +45,45 @@ header {
 }
 
 .logo img {
-    width: 3.75rem;  /* Usamos rem para el tamaño del logo */
-    height: 3.125rem; /* Usamos rem para el tamaño del logo */
+    width: 3.7rem;  
+    height: 3.2rem;
 }
 
 .logo h1 {
-    font-size: 1.3rem;  /* Usamos rem para ajustar el tamaño del texto */
+    font-size: 1.3rem; 
     font-family: var(--fuente-monstserrat);
     margin: 0;
     display: flex;
     flex-direction: column;
+    font-weight: 600;
 }
 
 .azul {
-    color: #04AAB6;
+    color: var(--color-principal);
 }
 
 .gris {
-    color: #A2A2A2;
+    color: var(--color-secundario);
 }
 
 /* Estilos para el menú */
 .nav .menu {
     list-style: none;
     display: flex;
-    gap: 2rem;  /* Usamos rem para espaciar los elementos */
+    gap: 2rem;  
     margin: 0;
     padding: 0;
 }
 
 .menu li a:not(.contacto) {
     text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.0625rem;  /* Usamos rem para ajustar el tamaño del texto */
+    color: var(--color-negro);
+    font-weight:500;
+    font-size: 1.06rem;  
     font-family: var(--fuente-monstserrat);
     transition: color 0.5s ease, border-bottom 0.3s ease; 
     position: relative;
-    padding-bottom: 0.25rem;  /* Usamos rem para el padding */
+    padding-bottom: 0.25rem;  
 }
 
 .menu li a:not(.contacto)::after {
@@ -86,8 +92,8 @@ header {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 0.125rem;  /* Usamos rem para el grosor */
-    background-color: #A2A2A2;
+    height: 0.125rem;  
+    background-color: #A7A4A3;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease;
@@ -100,102 +106,111 @@ header {
 
 .menu .contacto {
     text-decoration: none;
-    background-color: #04AAB6;
-    color: #FFFFFF;
-    padding: 0.625rem 1.25rem;  /* Usamos rem para el padding */
+    font-weight:500;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 0.625rem 1.25rem; 
     border-radius: 20px;
     transition: all 0.3s ease;
     font-family: var(--fuente-monstserrat);
 }
 
 .menu .contacto:hover {
-    background-color: #000000;
+    background-color: var(--color-negro);
     transform: scale(1.1);
     font-family: var(--fuente-monstserrat);
 }
 
 /* Estilos para el ícono de hamburguesa y menú en pantallas pequeñas */
 .menu-toggle {
-    display: none;  /* Por defecto no se muestra en pantallas grandes */
+    display: none;  
     cursor: pointer;
 }
 
 .menu-toggle i {
-    font-size: 2rem;  /* Tamaño del ícono */
-    color: #000;
+    font-size: 2rem; 
+    color: var(--color-negro);
 }
 
 
+/*Main*/
 
+.HOLA{
+    background-color: #04AAB6;
+}
 /* Footer*/
 
 .footer {
-    background-color: #000000;
-    padding: 2% 15% ;
-    color: #ffffff;
+    background-color:var(--color-negro);
+    padding: 2% 10% ;
+    color:var(--color-blanco);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+
 }
 
 .footer_logo{
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding-top: 1rem;
+    padding-top: 0.4rem;
 
 }
 .footer_logo img{
-    width: 4.375rem;
-    height: 3.75rem;
+    width: 3.7rem;
+    height: 3.2rem;
 
 }
 
 .footer_logo p{
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     font-family: var(--fuente-monstserrat);
-    font-weight: bold;
+    font-weight: 600;
     margin: 0;
     display: flex;
     flex-direction: column;
+    padding-top: 1rem;
 }
 
-.footer_contacto .contacto_principal{
-    font-size: 1.125rem ;
+.contacto_principal{
+    font-size: 1.1rem ;
     font-family: var(--fuente-monstserrat);
-    color: #fcf8f8;
+    color:var(--color-blanco);
+   
 }
 
-.footer_contacto p{
-    font-size: 0.875rem;
+.footer_contacto p:not(.contacto_principal){
+    font-size: 0.9rem;
     font-family: var(--fuente-monstserrat); 
-    color: #C6C7CB;
+    color:var(--color-secundario);
 }
 
 
 .footer_redes p{
-  
-    font-size: 1.06rem ;
+    font-size: 1.1rem ;
     font-family: var(--fuente-monstserrat);
-    color: #fcf8f8;
+    color: var(--color-blanco);
 }
 
 
 .redes_img {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 
 }
 
 .redes_img img{
-    width: 1.875rem;
-    height: 1.75rem;
+    width: 1.8rem;
+    height: 1.7rem;
 
 }
 
 .footer_line {
-    background-color: #ffffff; 
+    background-color: var(--color-blanco); 
     margin: 0.05rem ;  
 }
 
@@ -205,15 +220,15 @@ header {
     display: flex;
     padding: 2rem;
     justify-content: center;
-    background-color: #000000;
+    background-color: var(--color-negro);
   
 }
 
 .footer_copyright p{
   
-    font-size: 0.8rem ;
+    font-size: 0.9rem ;
     font-family: var(--fuente-monstserrat);
-    color: #fcfcfc;
+    color: var(--color-blanco);
     text-align: center;
 }
 
@@ -223,227 +238,50 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilos generales */
-@media (max-width: 1280px) {
-
-    /* Logo en pantallas pequeñas */
-    .header {
-        gap: 2rem; /* Espaciado entre logo y navegación */
-    }
-
-    .logo {
-        gap: 0.5rem;
-        margin-left: -2rem; /* Puedes ajustar este valor si necesitas mover más a la izquierda */
-        margin-top: 0.5rem;
-    }
-
-    .logo img {
-        width: 3.4rem; /* Logo más pequeño en pantallas pequeñas */
-        height: 3rem;
-    }
-
-    .logo h1 {
-        padding-top: 0.7rem;
-        font-size: 1rem;  /* Texto más pequeño en pantallas pequeñas */
-    }
-
-    /* Ajustes a la navegación */
-    .nav {
-        padding-top: 2rem;
-        margin-right: 0; /* Elimina el margen negativo que podría generar un desplazamiento */
-    }
-
-    .nav .menu {
-        gap: 1rem;
-    }
-
-    .menu li a:not(.contacto) {
-        font-size: 1rem;  /* Texto más pequeño */
-        padding: 0.1rem;  /* Espaciado mayor para hacer clic fácil */
-    }
-
-    /*Footer*/
-    .footer {
-        padding: 2% 10%;
-    }
-
-    .footer_logo {
-        gap: 1rem;
-    }
-
-    .footer_logo img {
-        width: 3.75rem;
-        height: 3.25rem;
-    }
-
-    .footer_logo p {
-        font-size: 1rem;
-    }
-
-    .footer_contacto .contacto_principal {
-        font-size: 1rem;
-    }
-
-    .footer_contacto p {
-        font-size: 0.9rem;
-    }
-
-    .footer_redes p {
-        font-size: 1rem;
-    }
-
-    .redes_img img {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-
-    .footer_copyright p {
-        font-size: 0.75rem;
-    }
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilos en pantallas muy pequeñas */
-@media (max-width: 810px) {
+@media (max-width: 900px) {
     /* Logo */
-    .logo {
-        padding: 1rem;
-        gap: 0.5rem;
-        /* margin-left: 0.005rem; */
-    }
 
-    .logo img {
-        width: 3.2rem; /* Logo más pequeño en pantallas pequeñas */
-        height: 2.8rem;
-    }
 
-    .logo h1 {
-        padding-top: 0.7rem;
-        font-size: 0.9rem;  /* Texto más pequeño en pantallas pequeñas */
-    }
-
+        .logo h1 {
+            font-size: 1.1rem;  /* Texto más pequeño en pantallas pequeñas */
+        }
+    
     /* Estilos para la barra de menú */
+
+ 
     .nav {
-        padding-top: 1rem;
-       
+        background-color: transparent;
+        padding-right: 10%;
+        z-index: 10;
+      
     }
     .nav .menu {
-        display: none;
-        position: fixed;
-        flex-direction: column;
-        gap: 0.8rem;
-        width: 100%;
-        height: 20%;
-        top: 110px;
-        right: -71%;  /* Ajusta el valor para asegurarte que el menú no quede fuera de la pantalla */
-        transition: all;
-        padding-left: 0.1rem;
-    }
-
-    .nav .menu li a {
-        font-size: 0.8rem;  /* Texto más pequeño */
-        padding: 0.1rem;  /* Espaciado mayor para hacer clic fácil */
-        background-color: transparent;
-        width: 100%;
-        text-align: right;
-        color: #000000;
-    }
-
-    /* Estilo de "CONTACTO" */
-    .menu .contacto {
-        background-color: transparent;
-        color: #000000;
-        padding: 0;
-        border-radius: 0;
-        font-weight: bold;
-        font-size: 1.0625rem;
-        transition: color 0.5s ease, border-bottom 0.3s ease;
-        position: relative;
-        padding-bottom: 0.25rem;
-    }
-
-    .menu .contacto::after {
-        content: '';
+        background-color: var(--color-secundario);  /* Fondo blanco elegante */
+        display: none;  /* Inicialmente oculto */
         position: absolute;
-        bottom: 0;
+        margin-top: 2.5%;
+        top: auto;  /* Inicia desde la parte superior de la pantalla */
         left: 0;
+        right: 0;
+        padding: 5% 5%;  /* Un poco de espacio alrededor */
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;  /* Espaciado entre los elementos */
         width: 100%;
-        height: 0.125rem;
-        background-color: #A2A2A2;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
+        z-index: 1000;
+        max-height: 0;  /* Iniciar con el menú colapsado */
+        overflow: hidden;  /* Esconde el contenido que sobrepase el tamaño */
+        transition: max-height 0.5s ease-in-out;  /* Transición suave de la altura */
+
     }
 
-    .menu .contacto:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-
-    .menu .contacto:hover {
-        background-color: transparent;
-        transform: none;
-    }
 
     /* Estilos para el ícono de menú hamburguesa */
     .nav .menu-toggle {
         display: block;
-        padding-top: 0.6rem;
-        padding-right: 2.5rem;
+        cursor: pointer;
+        z-index: 1001;  /* Asegura que el ícono esté por encima del menú */
     }
 
     .menu-toggle i {
@@ -451,65 +289,22 @@ header {
     }
 
     .menu.show {
-        display: flex;
-    }
+       
+  display: flex;
+    max-height: 500px;  /* Ajusta este valor para permitir que el menú se expanda completamente */
+    opacity: 1;  /* El menú es visible */
+        
 
 
+    /*Footer*/
     .footer {
-        padding: 2% 5%;
-        flex-direction: column;
-        align-items:center; /* Centra los elementos en pantallas pequeñas */
-        justify-items: flex-start;
+        padding: 5% 15%;
+        width: auto;
+   
+
     }
 
-    .footer_logo {
-        gap: 1rem;
-        justify-content: center;
-        padding-top: 1rem;
-    }
-
-    .footer_logo img {
-        width: 3rem;
-        height: 2.5rem;
-    }
-
-    .footer_logo p {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    .footer_contacto .contacto_principal {
-        font-size: 1rem;
-    }
-
-    .footer_contacto p {
-        font-size: 0.85rem;
-    }
-
-    .footer_redes p {
-        font-size: 1rem;
-    }
-
-    .redes_img {
-        justify-content: center;
-    }
-
-    .redes_img img {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
-
-    .footer_copyright p {
-        font-size: 0.75rem;
-    }
-
-    .footer_line {
-        width: 80%;
-    }
-
-
-
-
+   
 }
 
 /* Mostrar el menú desplegable cuando se hace clic en el ícono */
