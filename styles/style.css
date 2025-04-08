@@ -1,12 +1,12 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patua+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
 :root{
     --fuente-monstserrat: "Montserrat", sans-serif;
     --fuente-philosopher: "Philosopher", sans-serif;
+    --fuente-roboto:"Roboto", sans-serif;
     --color-principal: #04AAB6;
     --color-secundario: #A2A2A2;
     --color-blanco:#FFFFFF;
@@ -28,15 +28,18 @@ header {
     top: 0;
     z-index: 1000;
     width: 100%;
+    background-color: #FFFFFF;
+
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5% 10%;
-    background-color: #FFFFFF;
+    padding: 2% 10% ;
     flex-wrap: wrap;
+   /*Añadir un max-width para evitar que se estire demasiado */
+    margin: 0 auto;
 }
 
 .logo {
@@ -136,15 +139,285 @@ header {
 
 
 /*Main*/
-
-.HOLA{
-    background-color: #04AAB6;
+main {
+    max-width: 100%;  /* Añadir max-width */
+    margin: 0 auto;     /* Centra el contenido */
 }
+
+.inicio-container1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: 625px;
+    overflow: hidden; /* Evitar que se estire más allá de este límite */
+    margin: 0 auto;    /* Centrado horizontal */
+   
+}
+.inicio-container1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Asegura que la imagen cubra todo sin deformarse */
+    
+
+}
+
+@keyframes fadeInUpOverlay {
+    0% {
+      transform: translate(-10%, 30%); /* Empieza un poco más cerca de su posición final */
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-10%, -30%); /* Termina completamente centrado */
+      opacity: 1;
+    }
+  }
+.text-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 50%; 
+    transform: translate(-10%, -30%);
+    text-align:center;
+    color: var(--color-blanco);
+    font-family: var(--fuente-roboto);
+    font-size:2.2rem;
+    font-weight:bold; /* Cambiado de 'font-style: bold' a 'font-weight: bold' */
+    width: 45%;/* Limita el ancho máximo para que no se desborde */
+    white-space: normal; /* Permite el salto de línea si el texto es demasiado largo */
+    word-wrap: break-word; /* Permite que el texto se ajuste dentro del contenedor */
+    animation: 1s fadeInUpOverlay;
+  
+}
+
+@keyframes fadeInUp {
+    0% {
+      transform: translate(-30%, 30%); /* Empieza un poco más cerca de su posición final */
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-30%, -40%); /* Termina completamente centrado */
+      opacity: 1;
+    }
+  }
+.highlight-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 55%;
+    left: 65%;
+    transform: translate(-30%, -40%);
+    text-align: center;
+    color: white;
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-top: 60px;
+    font-family: var(--fuente-roboto);
+    font-size: 1.3rem; 
+    transition: background-color 0.3s, color 0.3s; 
+    /* max-width: 80%; /* Limita el ancho máximo para que no se desborde */
+    white-space: normal; /* Permite el salto de línea si el texto es demasiado largo */
+    word-wrap: break-word; /*Permite que el texto se ajuste dentro del contenedor */
+    animation: 1s fadeInUp;
+
+}
+
+.highlight-text a {
+    color: white;
+    text-decoration: none;
+}
+
+.highlight-text:hover {
+    background-color:  #000000;
+   
+}
+
+/*Container2*/
+
+.inicio-container2{
+    background-color: var(--color-blanco);
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    /* height:100%; */
+    /* margin: 2% 5%; */
+    padding: 1% 10% ;
+
+
+}
+
+.edificio-img{
+
+    max-width: 75%;
+    min-width: 45%;
+    height:auto;
+    margin: 5% 4%;
+
+}
+.imgedificio{
+    width:75%;
+    height:0%; 
+    /* object-fit: cover; */
+
+    border-radius: 10px;
+}
+
+.text-container2{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    /* width: 80%; */
+     
+} 
+
+@keyframes fadeInUpText {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+
+.text{
+    padding: 2% 2%;
+    text-align: center;
+    width: 95%;
+   
+} 
+.text {
+    opacity: 0;  /* Comienza invisible */
+    transform: translateY(100%);  /* Comienza desplazado */
+    transition: opacity 1.5s ease, transform 1.5s ease;  /* Configura la animación */
+}
+
+.text.visible {
+    opacity: 1;
+    transform: translateY(0%);
+    animation: fadeInUpText 0.8s ease forwards;  /* Aplica la animación cuando el texto es visible */
+}
+
+.text strong{
+    color:var(--color-principal); /* Cambia este color a tu preferencia */
+    margin-bottom: 10%; /* Añade un espacio debajo del texto en strong */
+    font-size: 2rem; 
+    font-family: var(--fuente-monstserrat);
+    line-height: 1.6; 
+}
+
+.text p{
+    margin-top: 2rem; /* Añade un espacio entre strong y p */
+    font-size: 1.3rem; 
+    font-family:var(--fuente-monstserrat);
+    line-height: 1.6; 
+}
+
+@keyframes fadeInUpIcon {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.iconos-container2{
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    width: 95%;
+    padding: 2% 10%;
+    margin-top: 2rem;
+    opacity: 0;  /* Comienza invisible */
+    transform: translateY(100%);  /* Comienza desplazado */
+    transition: opacity 1.5s ease, transform 1.5s ease;  /* Configura la animación */
+    
+
+} 
+
+.iconos-container2.visible {
+    opacity: 1;
+    transform: translateY(0%);
+    animation: fadeInUpIcon 0.8s ease forwards;  /* Aplica la animación cuando el contenedor .iconos-container2 entra en el viewport */
+}
+
+.iconos_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 12px;
+    width: 80%;
+    height: auto;
+}
+
+.iconos_img:hover {
+    transform: scaleX(1.2) scaleY(1.2);  /* Aumenta el tamaño en el eje X y Y */
+    transition: transform 0.3s ease;  /* Configura la transición para el efecto hover */
+}
+
+.iconos{
+    width: 35%;
+    height: auto;
+
+}
+
+.iconos_img  p{
+
+    font-family: var(--fuente-monstserrat);
+    font-size: 1rem; 
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer*/
 
 .footer {
     background-color:var(--color-negro);
-    padding: 2% 15% ;
+    padding: 2% 10% ;
     color:var(--color-blanco);
     display: flex;
     align-items: flex-start;
@@ -187,6 +460,8 @@ header {
     align-items:flex-start;
     flex-direction: column;
     flex-wrap: wrap;
+  
+   
 
     
 }
@@ -208,8 +483,6 @@ header {
     
     
 }
-
-
 
 .footer_redes p{
     font-size: 1.1rem ;
@@ -241,7 +514,8 @@ header {
 
     width: 100%;
     display: flex;
-    padding: 1.5rem;
+    padding: 2% 10% ;
+    /* padding: 1.5rem; */
     justify-content: center;
     background-color: var(--color-negro);
   
@@ -261,7 +535,7 @@ header {
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
     /* Logo */
 
 
@@ -274,15 +548,16 @@ header {
  
     .nav {
         background-color: transparent;
-        padding-right: 10%;
+        /* padding-right: 10%; */
         z-index: 10;
       
     }
     .nav .menu {
+        transform: translateY(5%);
         background-color: var(--color-blanco);  /* Fondo blanco elegante */
         display: none;  /* Inicialmente oculto */
         position: absolute;
-        margin-top: 2.5%;
+        /* margin-top: 2.5%; */
         top: auto;  /* Inicia desde la parte superior de la pantalla */
         left: 0;
         right: 0;
@@ -301,7 +576,7 @@ header {
 
 
     /* Estilos para el ícono de menú hamburguesa */
-    .nav .menu-toggle {
+    .menu-toggle {
         display: block;
         cursor: pointer;
         z-index: 1001;  /* Asegura que el ícono esté por encima del menú */
@@ -309,6 +584,7 @@ header {
 
     .menu-toggle i {
         font-size: 2rem;
+        
     }
 
     .menu.show {
@@ -319,13 +595,122 @@ header {
     } 
 
 
+
+    /*Main*/
+    .inicio-container1 {
+        height: 500px; /* Ajustar la altura para pantallas más pequeñas */
+    }
+
+    @keyframes fadeInUpOverlayMedia{
+        0% {
+          transform: translate(-50%, 25%); /* Empieza un poco más cerca de su posición final */
+          opacity: 0;
+        }
+        100% {
+          transform: translate(-50%, -25%); /* Termina completamente centrado */
+          opacity: 1;
+        }
+      }
+    .text-overlay {
+        top:30%; /* Ajustar la posición vertical */
+        transform: translate(-50%, -25%); /* Centrando completamente */
+        font-size: 2rem; 
+        width: 60%;
+        animation: 1.5s fadeInUpOverlayMedia;
+    }
+
+    @keyframes fadeInUpMedia {
+        0% {
+          transform: translate(-50%, 40%); /* Empieza un poco más cerca de su posición final */
+          opacity: 0;
+        }
+        100% {
+          transform: translate(-50%, -50%); /* Termina completamente centrado */
+          opacity: 1;
+        }
+      }
+
+    .highlight-text {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrar completamente */
+        /* padding: 12px 25px; */
+        font-size: 1rem; 
+        animation: 1.5s fadeInUpMedia;
+       
+    }
+
+
+    /*container*/
+    .inicio-container2 {
+        flex-direction:column-reverse;
+        /* Cambiamos a columna para pantallas más pequeñas */ 
+        height: auto; /* Ajustamos la altura */
+        padding: 1% 0;
+        margin: 5% 5%;
+    }
+
+    .edificio-img {
+        width: 50%; /* Ajustamos el ancho de la imagen */
+        min-width: auto;
+        height: auto;
+        margin: 0 0;
+        margin-top: 3%; /* Añadimos un espacio entre la imagen y el texto */
+    }
+
+    .imgedificio{
+        width: 100%;
+        
+
+        height: auto; /* Asegura que se mantenga la proporción */
+        min-height: 20vh; /* Esto hará que tenga un mínimo de 60% de la altura de la pantalla */
+        object-fit: cover; /* Se recorta sin deformarse si es necesario */
+        
+    }
+
+
+    .text-container2 {
+        width: 90%; /* Ajustamos el ancho para que se vea bien en pantallas pequeñas */
+        min-width: auto;
+    }
+
+    .text {
+        width: 100%;
+        min-width: auto;
+        padding: 2% 5%; /* Reducimos el padding en pantallas pequeñas */
+    }
+
+
+    .iconos-container2 {
+        width: 100%; /* Aumentamos el ancho para aprovechar todo el espacio */
+        padding: 5% 5%; /* Reducimos el padding */
+    }
+
+    .iconos_img {
+        width: 100%; /* Ajustamos el ancho de los iconos */
+        min-width: auto;
+    }
+
+    .iconos {
+        width: 30%; /* Ajustamos el tamaño de los iconos */
+        min-width: auto;
+    }
+
+
+
+
+
+
+
+
+
     /*Footer*/
     .footer {
         padding: 5% 15%;
         width: auto;
    
     }
- 
+
    
 }
 
