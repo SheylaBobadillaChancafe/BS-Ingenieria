@@ -269,8 +269,10 @@ main {
 
 .text-container2{
     display: flex;
-    justify-content:center;
-    align-items: center;
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    height: 620px;
     /* width: 80%; */
      
 } 
@@ -305,13 +307,15 @@ main {
     animation: fadeInUpText 0.8s ease forwards;  /* Aplica la animación cuando el texto es visible */
 }
 
-.text strong{
+h2{
     color:var(--color-principal); /* Cambia este color a tu preferencia */
     margin-bottom: 10%; /* Añade un espacio debajo del texto en strong */
     font-size: 2rem; 
     font-family: var(--fuente-monstserrat);
-    line-height: 1.6; 
+    line-height: 1.4; 
 }
+
+
 
 .text p{
     margin-top: 2rem; /* Añade un espacio entre strong y p */
@@ -350,10 +354,10 @@ main {
 .iconos-container2.visible {
     opacity: 1;
     transform: translateY(0%);
-    animation: fadeInUpIcon 0.8s ease forwards;  /* Aplica la animación cuando el contenedor .iconos-container2 entra en el viewport */
+    animation: fadeInUpText 0.8s ease forwards;  /* Aplica la animación cuando el contenedor .iconos-container2 entra en el viewport */
 }
 
-.iconos_img{
+.iconos-img{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -363,7 +367,7 @@ main {
     height: auto;
 }
 
-.iconos_img:hover {
+.iconos-img:hover {
     transform: scaleX(1.2) scaleY(1.2);  /* Aumenta el tamaño en el eje X y Y */
     transition: transform 0.3s ease;  /* Configura la transición para el efecto hover */
 }
@@ -374,7 +378,7 @@ main {
 
 }
 
-.iconos_img  p{
+.iconos-img  p{
 
     font-family: var(--fuente-monstserrat);
     font-size: 1rem; 
@@ -382,6 +386,80 @@ main {
     
 }
 
+.inicio-container3{
+    background-color: var(--color-blanco);
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+    align-items:center;
+    /* height:100%; */
+    /* margin: 2% 5%; */
+    padding: 1% 10% ;
+    height: 620px;
+  
+
+}
+
+.text-servicios{
+ 
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease, opacity 1s ease;
+    margin-bottom: 0px;
+}
+
+/* Cuando el texto h2 entra en el viewport, se activa la animación */
+.text-servicios.visible {
+    animation: fadeInUpText 1s ease forwards;
+}
+
+.ver-mas{
+    text-decoration: none;
+    font-weight:500;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 0.625rem 1.25rem; 
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    font-family: var(--fuente-monstserrat);
+}
+
+.ver-mas:hover {
+    background-color: var(--color-negro);
+    transform: scale(1.1);
+    font-family: var(--fuente-monstserrat);
+}
+
+
+
+.carousel-container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    gap: 10px;
+  
+}
+
+.imgedificio1 {
+    width: 0px;
+    height: 350px;
+    flex-grow: 1;
+    object-fit: cover;
+
+    transition: 0.5s ease;
+ 
+}
+
+.imgedificio1:hover {
+    cursor: pointer;
+    width: 10%;
+    opacity: 1;
+    filter: contrast(120%);
+    transform: scaleX(1.2) scaleY(1.2);  /* Aumenta el tamaño en el eje X y Y */
+    transition: transform 0.3s ease;  /* Configura la transición para el efecto hover */
+}
 
 
 
