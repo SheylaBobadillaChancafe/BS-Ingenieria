@@ -13,6 +13,7 @@ function isElementInViewport(el) {
     return rect.top <= window.innerHeight && rect.bottom >= 0;
 }
 
+//PAGINA INICIO
 // Función para agregar la clase de animación cuando se haga scroll
 function handleScroll() {
     // Animar los textos en .text-container2
@@ -45,9 +46,10 @@ function handleScroll() {
 
     
 }
-
 // Ejecutar la función handleScroll cuando se haga scroll
 window.addEventListener('scroll', handleScroll);
 
 // También ejecutamos handleScroll en caso de que los contenedores ya estén visibles al cargar la página
 window.addEventListener('load', handleScroll);
+
+//PAGINA NOSOTROS
