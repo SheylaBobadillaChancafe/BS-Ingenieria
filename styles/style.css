@@ -118,6 +118,7 @@ header {
     border-radius: 20px;
     transition: all 0.3s ease;
     font-family: var(--fuente-monstserrat);
+    font-size: 1.06rem;
 }
 
 .menu .contacto:hover {
@@ -265,12 +266,12 @@ main {
     display: flex;
     justify-content:space-around;
     align-items:center;
-    padding: 1% 10% ;
-
+    padding: 0% 10% ;
+    height: 600px;
 
 }
 
-.edificio-img{
+/* .edificio-img{
 
     max-width: 75%;
     min-width: 45%;
@@ -281,17 +282,15 @@ main {
 .imgedificio{
     width:75%;
     height:0%; 
-    /* object-fit: cover; */
-
     border-radius: 10px;
-}
+} */
 
 .text-container2{
     display: flex;
     flex-direction: column; /* Organiza los elementos en columna */
     justify-content: center; /* Centra los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
-    height: 620px;
+    height: auto;
     /* width: 80%; */
      
 } 
@@ -311,7 +310,7 @@ main {
 .text {
     padding: 2% 2%;
     text-align: center;
-    width: 95%;
+    width: 80%;
     opacity: 0;  /* Comienza invisible */
     transform: translateY(100%);  /* Comienza desplazado */
     transition: opacity 1.5s ease, transform 1.5s ease;  /* Configura la animación */
@@ -325,8 +324,8 @@ main {
 
 h2{
     color:var(--color-principal); /* Cambia este color a tu preferencia */
-    margin-bottom: 10%; /* Añade un espacio debajo del texto en strong */
-    font-size: 2rem; 
+    margin-bottom: 10%; 
+    font-size: 1.6rem; 
     font-family: var(--fuente-monstserrat);
     line-height: 1.4; 
 }
@@ -334,10 +333,11 @@ h2{
 
 
 .text p{
-    margin-top: 2rem; /* Añade un espacio entre strong y p */
-    font-size: 1.3rem; 
+    margin-top: 2rem; 
+    font-size: 1rem; 
     font-family:var(--fuente-monstserrat);
     line-height: 1.6; 
+    text-align: justify;
 }
 
 @keyframes fadeInUpIcon {
@@ -357,7 +357,7 @@ h2{
     justify-content:center;
     align-items: center;
     gap: 10px;
-    width: 95%;
+    width: 80%;
     padding: 0% 10%;
     margin-top: 2rem;
     opacity: 0;  /* Comienza invisible */
@@ -379,7 +379,7 @@ h2{
     align-items: center;
     flex-direction: column-reverse;
     gap: 12px;
-    width: 80%;
+    width: 20%;
     height: auto;
 }
 
@@ -407,11 +407,12 @@ h2{
 .inicio-container3{
     background-color: var(--color-blanco);
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
     flex-direction: column;
     align-items:center;
     padding: 0% 10% ;
-    height: 600px;
+    height: 620px;
+    gap: 10%;
     
 }
 
@@ -434,6 +435,7 @@ h2{
     margin: 0 auto;
     width: 100%;
     gap: 3%;
+
   
 }
 
@@ -449,8 +451,8 @@ h2{
 /* Estilos comunes para todas las tarjetas */
 .card {
  
-    width: 100%;
-    height: 350px;
+    width: 30%;
+    height: 400px;
     margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -488,12 +490,13 @@ h2{
 
   
 .title {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: rgb(0, 0, 0);
     text-align: center;
     padding:0% 5%;  
     color: var(--color-blanco);
+    font-family: var(--fuente-monstserrat);
 }
   
 .action {
@@ -525,7 +528,7 @@ h2{
     justify-content:space-around;
     flex-direction: column;
     align-items:center;
-    padding: 1% 10% ;
+    padding: 3% 10% ;
     padding-bottom: 4%;
     height: 680px;
 }
@@ -535,12 +538,14 @@ h2{
     opacity: 0;
     transform: translateY(100%);
     transition: transform 1s ease, opacity 1s ease;
-    margin-bottom: 0px;
+    margin-top: 20px;
+   
 }
 
 /* Cuando el texto h2 entra en el viewport, se activa la animación */
 .text-proyectos.visible {
     animation: fadeInUpText 1s ease forwards;
+ 
 }
 
 
@@ -602,8 +607,8 @@ h2{
 .footer_logo{
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding-top: 0.4rem;
+    gap: 10px;
+    padding-top: 1rem;
     flex-wrap: wrap;
 
 }
@@ -614,15 +619,14 @@ h2{
 }
 
 .footer_logo p{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-family: var(--fuente-monstserrat);
     font-weight: 600;
     margin: 0;
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
+    padding-top: 0.3rem;
 
-    
 }
 
 .footer_contacto{
@@ -634,7 +638,7 @@ h2{
 }
 
 .contacto_principal{
-    font-size: 1.1rem ;
+    font-size: 1.4rem ;
     font-family: var(--fuente-monstserrat);
     color:var(--color-blanco);
     margin-bottom: 0.3rem;
@@ -646,13 +650,14 @@ h2{
     font-size: 1rem;
     font-family: var(--fuente-monstserrat); 
     color:var(--color-secundario);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.1rem;
+    color: var(--color-blanco);
     
     
 }
 
 .footer_redes p{
-    font-size: 1.1rem ;
+    font-size: 1.4rem ;
     font-family: var(--fuente-monstserrat);
     color: var(--color-blanco);
 }
@@ -810,34 +815,30 @@ h2{
 
     /*Main container2*/
     .inicio-container2 {
-        flex-direction:column-reverse;
-        /* Cambiamos a columna para pantallas más pequeñas */ 
-        height: auto; /* Ajustamos la altura */
-        padding: 1% 0;
+        width: auto;
+        height: auto;
         margin: 20px 10px;
     }
-
+/* 
     .edificio-img {
-        width: 50%; /* Ajustamos el ancho de la imagen */
+        width: 50%; 
         min-width: auto;
         height: auto;
         margin: 0 0;
-        margin-top: 3%; /* Añadimos un espacio entre la imagen y el texto */
+        margin-top: 3%; 
     }
 
     .imgedificio{
         width: 100%;
+        height: auto; 
+        min-height: 20vh; 
+        object-fit: cover; 
         
-
-        height: auto; /* Asegura que se mantenga la proporción */
-        min-height: 20vh; /* Esto hará que tenga un mínimo de 60% de la altura de la pantalla */
-        object-fit: cover; /* Se recorta sin deformarse si es necesario */
-        
-    }
+    } */
 
 
     .text-container2 {
-        width: 90%; /* Ajustamos el ancho para que se vea bien en pantallas pequeñas */
+        width:auto; /* Ajustamos el ancho para que se vea bien en pantallas pequeñas */
         min-width: auto;
         height: 80%;
     }
@@ -850,18 +851,24 @@ h2{
 
 
     .iconos-container2 {
-        width: 100%; /* Aumentamos el ancho para aprovechar todo el espacio */
-        padding: 5% 5%; /* Reducimos el padding */
+    /* Aumentamos el ancho para aprovechar todo el espacio */
+        width:90%;
+        /* justify-content: space-between; */
+        align-items: center;
+        flex-wrap: wrap;
+        gap:10%;
+        padding: 2% 0%; /* Reducimos el padding */ 
     }
 
-    .iconos_img {
-        width: 100%; /* Ajustamos el ancho de los iconos */
+    .iconos-img {
+        width: auto; /* Ajustamos el ancho de los iconos */
+        height: auto;
         min-width: auto;
+
     }
 
     .iconos {
-        width: 30%; /* Ajustamos el tamaño de los iconos */
-        min-width: auto;
+        width: 50px; /* Ajustamos el tamaño de los iconos */
     }
 
   
