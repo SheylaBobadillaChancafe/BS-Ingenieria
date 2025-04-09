@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+main {
+    max-width: 100%; 
+    margin: 0 auto;     
+}
+
+/*Main container1*/
+.nosotros-container1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 625px;
+    overflow: hidden; /* Evitar que se estire más allá de este límite */
+    margin: 0 auto;    /* Centrado horizontal */
+    justify-content:space-around;
+    align-items:center;
+    padding: 0% 5% ;
+   
+}
+.nosotros-container1::before {
+    width: 100%;
+    height: 520px;
+    content: ''; /* Necesario para crear el pseudo-elemento */
+    position: absolute;
+    background-color:#C6C7CB; /* Aquí puedes cambiar el color y la opacidad */
+    opacity: 0.5;
+    z-index: -1; /* Esto asegura que el pseudo-elemento quede detrás de los elementos del contenedor */
+}
+
+
+.quienes-somos {
+
+    position: relative;
+    z-index: 1; /* Esto asegura que el contenido dentro de este div esté encima del pseudo-elemento */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 70%;
+    padding: 3rem; 
+    margin-left: 2%;
+}
+
+
+strong{
+    color:var(--color-negro); /* Cambia este color a tu preferencia */
+    font-size: 1.8rem; 
+    font-family: var(--fuente-monstserrat);
+    text-align: center;
+    display: block; 
+}
+
+.quienes-somos p{
+    font-size: 1.2rem; 
+    font-family: var(--fuente-monstserrat);
+    line-height: 1.8; 
+    margin-top: 3rem; /* Añade un pequeño espacio arriba del párrafo */
+    color: var(--color-negro);
+    text-align: justify;
+}
+
+.ingenieros {
+    width: 80%;
+    height: auto;
+}
