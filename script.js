@@ -29,12 +29,21 @@ function handleScroll() {
         });
     }
 
+        // Animar el <h2> en .inicio-container3
+        const container3 = document.querySelector('.inicio-container3');
+        if (isElementInViewport(container3)) {
+            const heading = container3.querySelector('.text-servicios');
+            heading.classList.add('visible');
+        }
+
     // Animar el <h2> en .inicio-container3
-    const container3 = document.querySelector('.inicio-container3');
-    if (isElementInViewport(container3)) {
-        const heading = container3.querySelector('h2');
+    const container4 = document.querySelector('.inicio-container4');
+    if (isElementInViewport(container4)) {
+        const heading = container4.querySelector('.text-proyectos');
         heading.classList.add('visible');
     }
+
+    
 }
 
 // Ejecutar la función handleScroll cuando se haga scroll

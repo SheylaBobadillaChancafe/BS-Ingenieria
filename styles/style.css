@@ -244,8 +244,6 @@ main {
     display: flex;
     justify-content:space-around;
     align-items:center;
-    /* height:100%; */
-    /* margin: 2% 5%; */
     padding: 1% 10% ;
 
 
@@ -289,13 +287,10 @@ main {
   }
   
 
-.text{
+.text {
     padding: 2% 2%;
     text-align: center;
     width: 95%;
-   
-} 
-.text {
     opacity: 0;  /* Comienza invisible */
     transform: translateY(100%);  /* Comienza desplazado */
     transition: opacity 1.5s ease, transform 1.5s ease;  /* Configura la animación */
@@ -342,7 +337,7 @@ h2{
     align-items: center;
     gap: 10px;
     width: 95%;
-    padding: 2% 10%;
+    padding: 0% 10%;
     margin-top: 2rem;
     opacity: 0;  /* Comienza invisible */
     transform: translateY(100%);  /* Comienza desplazado */
@@ -386,18 +381,17 @@ h2{
     
 }
 
+/*Container 3*/
+
 .inicio-container3{
     background-color: var(--color-blanco);
     display: flex;
     justify-content:space-around;
     flex-direction: column;
     align-items:center;
-    /* height:100%; */
-    /* margin: 2% 5%; */
-    padding: 1% 10% ;
-    height: 620px;
-  
-
+    padding: 0% 10% ;
+    height: 600px;
+    
 }
 
 .text-servicios{
@@ -408,11 +402,153 @@ h2{
     margin-bottom: 0px;
 }
 
-/* Cuando el texto h2 entra en el viewport, se activa la animación */
 .text-servicios.visible {
     animation: fadeInUpText 1s ease forwards;
 }
 
+.carousel-container3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    gap: 3%;
+  
+}
+
+.servicio1 {
+    width: 10%;
+    height: 400px;
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: 10px;
+ 
+}
+
+/* Estilos comunes para todas las tarjetas */
+.card {
+ 
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;   /* Alinea los elementos verticalmente (puedes cambiarlo a 'row' si los quieres en fila) */
+    justify-content:center;  /* Distribuye el espacio igual entre los elementos */
+    align-items: center;  /* Centra los elementos horizontalmente */
+    filter: contrast(100%);
+    gap: 10%;
+ 
+  
+  }
+  
+  /* Imágenes de fondo específicas para cada tarjeta */
+  .card-1 {
+    background-image: url('../img/imagen01.png'); 
+  }
+  
+  .card-2 {
+    background-image: url('../img/imagen02.png');
+  }
+  
+  .card-3 {
+    background-image: url('../img/imagen03.png');
+  }
+  
+
+  .card:hover {
+    transform: scaleX(1.1) scaleY(1.1);  /* Aumenta el tamaño en el eje X y Y */
+    transition: transform 0.3s ease;  /* Configura la transición para el efecto hover */
+}
+
+  
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding:0% 5%;  
+    color: var(--color-blanco);
+}
+  
+.action {
+
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    color: var(--color-blanco);
+    font-size: 1.2rem;
+    line-height: 1rem;
+    align-items: center;
+    background-color: var(--color-principal);
+    padding: 0.625rem 1.25rem;
+    border-radius: 20px;
+    cursor: pointer;
+
+  }
+  
+  .card .action:hover {
+    background-color: var(--color-negro);
+  }
+
+
+/*Container 4*/
+
+.inicio-container4{
+    background-color: var(--color-blanco);
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+    align-items:center;
+    padding: 1% 10% ;
+    padding-bottom: 4%;
+    height: 680px;
+}
+
+.text-proyectos{
+ 
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease, opacity 1s ease;
+    margin-bottom: 0px;
+}
+
+/* Cuando el texto h2 entra en el viewport, se activa la animación */
+.text-proyectos.visible {
+    animation: fadeInUpText 1s ease forwards;
+}
+
+
+.carousel-container4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    gap: 10px;
+}
+
+.imgedificio1 {
+    width: 0px;
+    height: 350px;
+    flex-grow: 1;
+    object-fit: cover;
+    transition: 0.5s ease;
+ 
+}
+
+.imgedificio1:hover {
+    cursor: pointer;
+    width: 10%;
+    opacity: 1;
+    filter: contrast(120%);
+    transform: scaleX(1.2) scaleY(1.2);  /* Aumenta el tamaño en el eje X y Y */
+    transition: transform 0.3s ease;  /* Configura la transición para el efecto hover */
+}
 .ver-mas{
     text-decoration: none;
     font-weight:500;
@@ -427,70 +563,7 @@ h2{
 .ver-mas:hover {
     background-color: var(--color-negro);
     transform: scale(1.1);
-    font-family: var(--fuente-monstserrat);
 }
-
-
-
-.carousel-container3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-    gap: 10px;
-  
-}
-
-.imgedificio1 {
-    width: 0px;
-    height: 350px;
-    flex-grow: 1;
-    object-fit: cover;
-
-    transition: 0.5s ease;
- 
-}
-
-.imgedificio1:hover {
-    cursor: pointer;
-    width: 10%;
-    opacity: 1;
-    filter: contrast(120%);
-    transform: scaleX(1.2) scaleY(1.2);  /* Aumenta el tamaño en el eje X y Y */
-    transition: transform 0.3s ease;  /* Configura la transición para el efecto hover */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Footer*/
 
 .footer {
@@ -502,8 +575,6 @@ h2{
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;   
-
-
 }
 
 
@@ -538,10 +609,7 @@ h2{
     align-items:flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-  
    
-
-    
 }
 
 .contacto_principal{
@@ -554,7 +622,7 @@ h2{
 
 .footer_contacto p:not(.contacto_principal){
 
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: var(--fuente-monstserrat); 
     color:var(--color-secundario);
     margin-bottom: 0.3rem;
@@ -674,7 +742,8 @@ h2{
 
 
 
-    /*Main*/
+    /*Main container1*/
+
     .inicio-container1 {
         height: 500px; /* Ajustar la altura para pantallas más pequeñas */
     }
@@ -718,14 +787,13 @@ h2{
        
     }
 
-
-    /*container*/
+    /*Main container2*/
     .inicio-container2 {
         flex-direction:column-reverse;
         /* Cambiamos a columna para pantallas más pequeñas */ 
         height: auto; /* Ajustamos la altura */
         padding: 1% 0;
-        margin: 5% 5%;
+        margin: 20px 10px;
     }
 
     .edificio-img {
@@ -750,6 +818,7 @@ h2{
     .text-container2 {
         width: 90%; /* Ajustamos el ancho para que se vea bien en pantallas pequeñas */
         min-width: auto;
+        height: 80%;
     }
 
     .text {
@@ -774,10 +843,42 @@ h2{
         min-width: auto;
     }
 
+  
+  
+        /* Ajustes para el contenedor principal */
+        .inicio-container3 {
+            width: auto;
+            height: auto;
+            padding: 0% 5%;  
+            gap: 30px;
+            margin: 50px 0px;
+          
+        }
+      
 
+      
+        /* Ajustes para el carrusel */
+        .carousel-container3 {
+            display: flex;
+            justify-content: space-around;  /* Centra los elementos dentro del contenedor */
+            width: 90%;  /* Ajuste del ancho para pantallas grandes */
+            flex-wrap: wrap;  /* Permite que los elementos se ajusten a nuevas líneas */
+            gap: 30px;  /* Espacio entre los elementos */
+            margin: 0px 0px;  /* Centra el contenedor */
+        }
 
-
-
+      
+        /* Ajustes para las tarjetas */
+        .card {
+            width: 350px;
+            height: 350px;     
+            margin: 0px 0px;    
+        }
+ 
+    /*container4*/
+        .text-proyectos{
+            text-align: center;
+        }
 
 
 
