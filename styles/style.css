@@ -38,7 +38,6 @@ header {
     justify-content: space-between;
     padding: 2% 10% ;
     flex-wrap: wrap;
-   /*Añadir un max-width para evitar que se estire demasiado */
     margin: 0 auto;
 }
 
@@ -168,6 +167,7 @@ main {
     margin: 0 auto;     
 }
 
+/*Main container1*/
 .inicio-container1 {
     display: flex;
     align-items: center;
@@ -175,23 +175,23 @@ main {
     padding: 0;
     width: 100%;
     height: 625px;
-    overflow: hidden; /* Evitar que se estire más allá de este límite */
-    margin: 0 auto;    /* Centrado horizontal */
+    overflow: hidden; 
+    margin: 0 auto;   
    
 }
 .inicio-container1 img{
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Asegura que la imagen cubra todo sin deformarse */
+    object-fit: cover;  
 }
 
 @keyframes fadeInUpOverlay {
     0% {
-      transform: translate(-10%, 30%); /* Empieza un poco más cerca de su posición final */
+      transform: translate(-10%, 30%); 
       opacity: 0;
     }
     100% {
-      transform: translate(-10%, -30%); /* Termina completamente centrado */
+      transform: translate(-10%, -30%); 
       opacity: 1;
     }
   }
@@ -207,21 +207,21 @@ main {
     color: var(--color-blanco);
     font-family: var(--fuente-roboto);
     font-size:2.2rem;
-    font-weight:bold; /* Cambiado de 'font-style: bold' a 'font-weight: bold' */
-    width: 45%;/* Limita el ancho máximo para que no se desborde */
-    white-space: normal; /* Permite el salto de línea si el texto es demasiado largo */
-    word-wrap: break-word; /* Permite que el texto se ajuste dentro del contenedor */
+    font-weight:bold; 
+    width: 45%;
+    white-space: normal; 
+    word-wrap: break-word;
     animation: 1s fadeInUpOverlay;
   
 }
 
 @keyframes fadeInUp {
     0% {
-      transform: translate(-30%, 30%); /* Empieza un poco más cerca de su posición final */
+      transform: translate(-30%, 30%); 
       opacity: 0;
     }
     100% {
-      transform: translate(-30%, -40%); /* Termina completamente centrado */
+      transform: translate(-30%, -40%); 
       opacity: 1;
     }
   }
@@ -242,9 +242,8 @@ main {
     font-family: var(--fuente-roboto);
     font-size: 1.3rem; 
     transition: background-color 0.3s, color 0.3s; 
-    /* max-width: 80%; /* Limita el ancho máximo para que no se desborde */
-    white-space: normal; /* Permite el salto de línea si el texto es demasiado largo */
-    word-wrap: break-word; /*Permite que el texto se ajuste dentro del contenedor */
+    white-space: normal; 
+    word-wrap: break-word; 
     animation: 1s fadeInUp;
 
 }
@@ -287,12 +286,10 @@ main {
 
 .text-container2{
     display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-    justify-content: center; /* Centra los elementos verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
-    height: auto;
-    /* width: 80%; */
-     
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: auto;    
 } 
 
 @keyframes fadeInUpText {
@@ -311,26 +308,24 @@ main {
     padding: 2% 2%;
     text-align: center;
     width: 80%;
-    opacity: 0;  /* Comienza invisible */
-    transform: translateY(100%);  /* Comienza desplazado */
-    transition: opacity 1.5s ease, transform 1.5s ease;  /* Configura la animación */
+    opacity: 0;  
+    transform: translateY(100%);  
+    transition: opacity 1.5s ease, transform 1.5s ease;  
 }
 
 .text.visible {
     opacity: 1;
     transform: translateY(0%);
-    animation: fadeInUpText 0.8s ease forwards;  /* Aplica la animación cuando el texto es visible */
+    animation: fadeInUpText 0.8s ease forwards;  
 }
 
 h2{
-    color:var(--color-principal); /* Cambia este color a tu preferencia */
+    color:var(--color-principal); 
     margin-bottom: 10%; 
     font-size: 1.6rem; 
     font-family: var(--fuente-monstserrat);
     line-height: 1.4; 
 }
-
-
 
 .text p{
     margin-top: 2rem; 
@@ -360,17 +355,15 @@ h2{
     width: 80%;
     padding: 0% 10%;
     margin-top: 2rem;
-    opacity: 0;  /* Comienza invisible */
-    transform: translateY(100%);  /* Comienza desplazado */
-    transition: opacity 1.5s ease, transform 1.5s ease;  /* Configura la animación */
-    
-
+    opacity: 0; 
+    transform: translateY(100%);  
+    transition: opacity 1.5s ease, transform 1.5s ease;  
 } 
 
 .iconos-container2.visible {
     opacity: 1;
     transform: translateY(0%);
-    animation: fadeInUpText 0.8s ease forwards;  /* Aplica la animación cuando el contenedor .iconos-container2 entra en el viewport */
+    animation: fadeInUpText 0.8s ease forwards;  
 }
 
 .iconos-img{
@@ -384,8 +377,8 @@ h2{
 }
 
 .iconos-img:hover {
-    transform: scaleX(1.2) scaleY(1.2);  /* Aumenta el tamaño en el eje X y Y */
-    transition: transform 0.3s ease;  /* Configura la transición para el efecto hover */
+    transform: scaleX(1.2) scaleY(1.2);  
+    transition: transform 0.3s ease;  
 }
 
 .iconos{
@@ -433,9 +426,7 @@ h2{
     align-items: center;
     margin: 0 auto;
     width: 100%;
-    gap: 3%;
-
-  
+    gap: 3%;  
 }
 
 .servicio1 {
@@ -444,7 +435,6 @@ h2{
     flex-grow: 1;
     object-fit: cover;
     border-radius: 10px;
- 
 }
 
 /* Estilos comunes para todas las tarjetas */
@@ -459,32 +449,29 @@ h2{
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;   /* Alinea los elementos verticalmente (puedes cambiarlo a 'row' si los quieres en fila) */
-    justify-content:center;  /* Distribuye el espacio igual entre los elementos */
-    align-items: center;  /* Centra los elementos horizontalmente */
+    flex-direction: column;   
+    justify-content:center; 
+    align-items: center;  
     filter: contrast(100%);
     gap: 10%;
- 
-  
   }
   
-  /* Imágenes de fondo específicas para cada tarjeta */
-  .card-1 {
+.card-1 {
     background-image: url('../img/imagen01.png'); 
   }
   
-  .card-2 {
+.card-2 {
     background-image: url('../img/imagen02.png');
   }
   
-  .card-3 {
+.card-3 {
     background-image: url('../img/imagen03.png');
   }
   
 
-  .card:hover {
-    transform: scaleX(1.1) scaleY(1.1);  /* Aumenta el tamaño en el eje X y Y */
-    transition: transform 0.3s ease;  /* Configura la transición para el efecto hover */
+.card:hover {
+    transform: scaleX(1.1) scaleY(1.1);  
+    transition: transform 0.3s ease; 
 }
 
   
@@ -497,26 +484,6 @@ h2{
     font-family: var(--fuente-monstserrat);
 }
   
-.action {
-
-    font-size: 1rem;
-    text-decoration: none;
-    margin-top: 1rem;
-    color: var(--color-blanco);
-    font-size: 1.2rem;
-    line-height: 1rem;
-    align-items: center;
-    background-color: var(--color-principal);
-    padding: 0.625rem 1.25rem;
-    border-radius: 20px;
-    cursor: pointer;
-
-  }
-  
-.card .action:hover {
-    background-color: var(--color-negro);
-  }
-
 
 /*Container 4*/
 
@@ -540,12 +507,9 @@ h2{
    
 }
 
-/* Cuando el texto h2 entra en el viewport, se activa la animación */
 .text-proyectos.visible {
     animation: fadeInUpText 1s ease forwards;
- 
 }
-
 
 .carousel-container4 {
     display: flex;
@@ -556,22 +520,21 @@ h2{
     gap: 10px;
 }
 
-.imgedificio1 {
+.galeria-proyectos {
     width: 0px;
     height: 350px;
     flex-grow: 1;
     object-fit: cover;
     transition: 0.5s ease;
- 
 }
 
-.imgedificio1:hover {
+.galeria-proyectos:hover {
     cursor: pointer;
     width: 10%;
     opacity: 1;
     filter: contrast(120%);
-    transform: scaleX(1.2) scaleY(1.2);  /* Aumenta el tamaño en el eje X y Y */
-    transition: transform 0.3s ease;  /* Configura la transición para el efecto hover */
+    transform: scaleX(1.2) scaleY(1.2); 
+    transition: transform 0.3s ease;  
 }
 .ver-mas{
     text-decoration: none;
@@ -624,15 +587,13 @@ h2{
     display: flex;
     flex-direction: column;
     padding-top: 0.3rem;
-
 }
 
 .footer_contacto{
     display: flex;
     align-items:flex-start;
     flex-direction: column;
-    flex-wrap: wrap;
-   
+    flex-wrap: wrap;  
 }
 
 .contacto_principal{
@@ -640,7 +601,6 @@ h2{
     font-family: var(--fuente-monstserrat);
     color:var(--color-blanco);
     margin-bottom: 0.3rem;
-   
 }
 
 .footer_contacto p:not(.contacto_principal){
@@ -649,9 +609,7 @@ h2{
     font-family: var(--fuente-monstserrat); 
     color:var(--color-secundario);
     margin-bottom: 0.1rem;
-    color: var(--color-blanco);
-    
-    
+    color: var(--color-blanco);  
 }
 
 .footer_redes p{
@@ -685,14 +643,12 @@ h2{
     width: 100%;
     display: flex;
     padding: 2% 10% ;
-    /* padding: 1.5rem; */
     justify-content: center;
     background-color: var(--color-negro);
   
 }
 
-.footer_copyright p{
-  
+.footer_copyright p{ 
     font-size: 0.9rem ;
     font-family: var(--fuente-monstserrat);
     color: var(--color-blanco);
@@ -703,88 +659,74 @@ h2{
 
 
 
-
-
 @media (max-width: 1080px) {
     /* Logo */
 
-
     .logo h1 {
-            font-size: 1.1rem;  /* Texto más pequeño en pantallas pequeñas */
+            font-size: 1.1rem;  
     }
-    
-    /* Estilos para la barra de menú */
-
- 
+     
     .nav {
         background-color: transparent;
-        /* padding-right: 10%; */
         z-index: 10;
       
     }
     .nav .menu {
         transform: translateY(5%);
-        background-color: var(--color-blanco);  /* Fondo blanco elegante */
-        display: none;  /* Inicialmente oculto */
+        background-color: var(--color-blanco);  
+        display: none;  
         position: absolute;
-        /* margin-top: 2.5%; */
-        top: auto;  /* Inicia desde la parte superior de la pantalla */
+        top: auto;  
         left: 0;
         right: 0;
-        padding: 5% 5%;  /* Un poco de espacio alrededor */
+        padding: 5% 5%;  
         flex-direction: column;
         align-items: center;
-        gap: 2rem;  /* Espaciado entre los elementos */
+        gap: 2rem;  
         width: 100%;
-        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);  /* Sombra ligera */
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);  
         z-index: 1000;
-        max-height: 0;  /* Iniciar con el menú colapsado */
-        overflow: hidden;  /* Esconde el contenido que sobrepase el tamaño */
-        transition: max-height 0.5s ease-in-out;  /* Transición suave de la altura */
-
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height 0.5s ease-in-out;  
     }
 
-
-    /* Estilos para el ícono de menú hamburguesa */
     .menu-toggle {
         display: block;
         cursor: pointer;
-        z-index: 1001;  /* Asegura que el ícono esté por encima del menú */
+        z-index: 1001;  /
     }
 
     .menu-toggle i {
-        font-size: 2rem;
-        
+        font-size: 2rem;    
     }
 
-    .menu.show {
-       
+    .menu.show {   
     display: flex;
-    max-height: 500px;  /* Ajusta este valor para permitir que el menú se expanda completamente */
-    opacity: 1;  /* El menú es visible */
+    max-height: 500px; 
+    opacity: 1; 
     } 
-
 
 
     /*Main container1*/
 
     .inicio-container1 {
-        height: 500px; /* Ajustar la altura para pantallas más pequeñas */
+        height: 500px; 
     }
 
     @keyframes fadeInUpOverlayMedia{
         0% {
-          transform: translate(-50%, 25%); /* Empieza un poco más cerca de su posición final */
+          transform: translate(-50%, 25%); 
           opacity: 0;
         }
         100% {
-          transform: translate(-50%, -25%); /* Termina completamente centrado */
+          transform: translate(-50%, -25%); 
           opacity: 1;
         }
       }
     .text-overlay {
-        top:30%; /* Ajustar la posición vertical */
-        transform: translate(-50%, -25%); /* Centrando completamente */
+        top:30%; 
+        transform: translate(-50%, -25%); 
         font-size: 2rem; 
         width: 60%;
         animation: 1.5s fadeInUpOverlayMedia;
@@ -792,11 +734,11 @@ h2{
 
     @keyframes fadeInUpMedia {
         0% {
-          transform: translate(-50%, 40%); /* Empieza un poco más cerca de su posición final */
+          transform: translate(-50%, 40%); 
           opacity: 0;
         }
         100% {
-          transform: translate(-50%, -50%); /* Termina completamente centrado */
+          transform: translate(-50%, -50%); 
           opacity: 1;
         }
       }
@@ -804,8 +746,7 @@ h2{
     .highlight-text {
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); /* Centrar completamente */
-        /* padding: 12px 25px; */
+        transform: translate(-50%, -50%); 
         font-size: 1rem; 
         animation: 1.5s fadeInUpMedia;
        
@@ -836,7 +777,7 @@ h2{
 
 
     .text-container2 {
-        width:auto; /* Ajustamos el ancho para que se vea bien en pantallas pequeñas */
+        width:auto; 
         min-width: auto;
         height: 80%;
     }
@@ -844,76 +785,63 @@ h2{
     .text {
         width: 100%;
         min-width: auto;
-        padding: 2% 5%; /* Reducimos el padding en pantallas pequeñas */
+        padding: 2% 5%;
     }
 
 
     .iconos-container2 {
-    /* Aumentamos el ancho para aprovechar todo el espacio */
         width:90%;
-        /* justify-content: space-between; */
         align-items: center;
         flex-wrap: wrap;
         gap:10%;
-        padding: 2% 0%; /* Reducimos el padding */ 
+        padding: 2% 0%; 
     }
 
     .iconos-img {
-        width: auto; /* Ajustamos el ancho de los iconos */
+        width: auto; 
         height: auto;
         min-width: auto;
 
     }
 
     .iconos {
-        width: 50px; /* Ajustamos el tamaño de los iconos */
+        width: 50px; /
     }
 
-  
-  
-        /* Ajustes para el contenedor principal */
-        .inicio-container3 {
+    /*container3*/
+    .inicio-container3 {
             width: auto;
             height: auto;
             padding: 0% 5%;  
             gap: 30px;
-            margin: 50px 0px;
-          
-        }
+            margin: 50px 0px;   
+    }
       
-
-      
-        /* Ajustes para el carrusel */
-        .carousel-container3 {
+    .carousel-container3 {
             display: flex;
-            justify-content: space-around;  /* Centra los elementos dentro del contenedor */
-            width: 90%;  /* Ajuste del ancho para pantallas grandes */
-            flex-wrap: wrap;  /* Permite que los elementos se ajusten a nuevas líneas */
-            gap: 30px;  /* Espacio entre los elementos */
-            margin: 0px 0px;  /* Centra el contenedor */
-        }
+            justify-content: space-around;  
+            width: 90%;  
+            flex-wrap: wrap;  
+            gap: 30px;  
+            margin: 0px 0px;  
+    }
 
-      
-        /* Ajustes para las tarjetas */
-        .card {
+    
+    .card {
             width: 350px;
             height: 350px;     
             margin: 0px 0px;    
-        }
+    }
  
     /*container4*/
         .text-proyectos{
             text-align: center;
         }
 
-
-
-
     /*Footer*/
     .footer {
         padding: 5% 15%;
         width: auto;
-   
     }
 
    

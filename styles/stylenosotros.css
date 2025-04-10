@@ -12,17 +12,16 @@ main {
     padding: 0;
     width: 100%;
     height: 625px;
-    overflow: hidden; /* Evitar que se estire más allá de este límite */
-    margin: 0 auto;    /* Centrado horizontal */
+    overflow: hidden; 
+    margin: 0 auto;    
     justify-content:space-around;
     align-items:center;
     padding: 0% 5% ;
-    /* Imagen de fondo */
-    background-image: url('../img/img2.png'); 
+    background-image: url('../img/portadanosotros.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative; /* Necesario para colocar el pseudo-elemento ::after */
+    position: relative;
 }
 
 /* Pseudo-elemento para agregar la capa oscura con transparencia */
@@ -38,8 +37,6 @@ main {
 }
 
 .quienes-somos {
-
-    /* Esto asegura que el contenido dentro de este div esté encima del pseudo-elemento */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,13 +47,12 @@ main {
     position: relative;
     font-weight: 500;
     background: rgba(155, 146, 150, 0.3);
-    border-radius: 20px;
-    
+    border-radius: 20px; 
 }
 
 
 strong{
-    color:var(--color-blanco); /* Cambia este color a tu preferencia */
+    color:var(--color-blanco);
     font-size: 1.7rem; 
     font-family: var(--fuente-monstserrat);
     text-align: center;
@@ -69,7 +65,7 @@ strong{
     font-size: 1.2rem; 
     font-family: var(--fuente-monstserrat);
     line-height: 1.8; 
-    margin-top: 3rem; /* Añade un pequeño espacio arriba del párrafo */
+    margin-top: 3rem; 
     color: var(--color-blanco);
     text-align: justify;
     position: relative;
@@ -96,8 +92,9 @@ strong{
     padding-right: 10%; 
     gap: 10%;
 }
+
 h3{
-    color:var(--color-principal); /* Cambia este color a tu preferencia */
+    color:var(--color-principal); /
     margin-bottom: 10%; 
     font-size: 1.6rem; 
     font-family: var(--fuente-monstserrat);
@@ -117,14 +114,14 @@ h3{
 }
 
 .linea {
-    height: 70%;  /* Altura total para que ocupe todo el espacio disponible */
-    width: 5px;    /* Ancho de la línea */
-    background-color: #9B9296 ; /* Color blanco */
+    height: 70%; 
+    width: 5px;    
+    background-color: #9B9296 ; 
     margin-top: -25px;
     
 }
 
-/*container3*/
+/*Main container3*/
 .nosotros-container3{
     width: auto;
     height: 620px;
@@ -133,7 +130,7 @@ h3{
     flex-direction: column;
     padding: 0% 10%;
     gap: 7%;
-    align-items: center;  /* Para centrar los otros elementos */
+    align-items: center;  
 }
 
 .text-valores   {
@@ -157,7 +154,7 @@ h3{
     border: 1px solid #cdc7c7;
     border-radius: 10px;
     overflow: hidden;
-    background-size: cover; /* La imagen cubrirá todo el contenedor */
+    background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
     display: flex;
@@ -182,7 +179,7 @@ h3{
 .card2:hover {
     border-radius: 15px;
     cursor: pointer;
-    transform: scale(1); /* Corregido el valor de scale */
+    transform: scale(1); 
   
 }
   
