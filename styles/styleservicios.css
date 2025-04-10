@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+main {
+    max-width: 100%; 
+    margin: 0 auto;     
+}
+
+/*Main container1*/
+.servicios-container1 {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 325px;
+    overflow: hidden; /* Evitar que se estire más allá de este límite */
+    margin: 0 auto;    /* Centrado horizontal */
+    justify-content:space-around;
+    align-items:center;
+    padding: 0% 5% ;
+    /* Imagen de fondo */
+    background-image: url('../img/servicios.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Necesario para colocar el pseudo-elemento ::after */
+}
+
+/* Pseudo-elemento para agregar la capa oscura con transparencia */
+.servicios-container1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); 
+    z-index: 1; 
+}
+.servicio-slogan {
+
+    /* Esto asegura que el contenido dentro de este div esté encima del pseudo-elemento */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 60%;
+    padding:5%; 
+    position: relative;
+    font-weight: 500;
+
+    border-radius: 20px;
+    
+}
+
+
+strong{
+    color:var(--color-blanco); /* Cambia este color a tu preferencia */
+    font-size: 1.7rem; 
+    font-family: var(--fuente-monstserrat);
+    text-align: center;
+    display: block; 
+    position: relative;
+    z-index: 2; 
+}
+
+/*container2*/
+.servicios-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que los elementos empiecen desde la parte superior */
+    align-items: center;
+    padding: 8% 15%;
+    width: 100%;
+    gap: 90px; /* Ajuste para el espacio entre los elementos */
+    height: auto; /* La altura se ajustará automáticamente al contenido */
+}
+
+.s-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+}
+
+.imgservicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgservicios img {
+    width: 90%;
+    height: auto;
+}
+
+.text-servicio1 {
+    display: flex;
+    flex-direction: column; /* Los elementos estarán uno debajo del otro */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* Ajustar el espacio entre los elementos */
+}
+
+.titulo-servicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icono-valores {
+    width: 10%;
+    border-radius: 100%;
+}
+
+.t-servicio {
+    color: var(--color-principal); /* Cambia este color a tu preferencia */
+    font-size: 1.6rem;
+    font-family: var(--fuente-monstserrat);
+    text-align: center;
+}
+
+.parrafo-servicios {
+    display: flex;
+    flex-direction: column; /* Los párrafos estarán uno debajo del otro */
+    justify-content: flex-start; /* Empieza desde la parte superior */
+    align-items: center;
+    width: 100%;
+    gap: 40px; /* Ajuste para el espacio entre los párrafos */
+}
+
+.parrafo-servicios p {
+    font-size: 1rem;
+    font-family: var(--fuente-monstserrat);
+    line-height: 1.6;
+    text-align: justify;
+}
