@@ -417,7 +417,6 @@ h2{
 }
 
 .text-servicios{
- 
     opacity: 0;
     transform: translateY(100%);
     transition: transform 1s ease, opacity 1s ease;
@@ -492,7 +491,6 @@ h2{
 .title {
     font-size: 1.3rem;
     font-weight: bold;
-    color: rgb(0, 0, 0);
     text-align: center;
     padding:0% 5%;  
     color: var(--color-blanco);
@@ -515,7 +513,7 @@ h2{
 
   }
   
-  .card .action:hover {
+.card .action:hover {
     background-color: var(--color-negro);
   }
 

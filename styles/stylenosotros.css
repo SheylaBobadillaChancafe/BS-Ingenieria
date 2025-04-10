@@ -17,9 +17,25 @@ main {
     justify-content:space-around;
     align-items:center;
     padding: 0% 5% ;
-   
+    /* Imagen de fondo */
+    background-image: url('../img/img2.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Necesario para colocar el pseudo-elemento ::after */
 }
 
+/* Pseudo-elemento para agregar la capa oscura con transparencia */
+.nosotros-container1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.25); 
+    z-index: 1; 
+}
 
 .quienes-somos {
 
@@ -28,29 +44,36 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 50%;
     height: 60%;
-    padding:0; 
-    margin-left: 7%;
+    padding:5%; 
     position: relative;
+    font-weight: 500;
+    background: rgba(155, 146, 150, 0.3);
+    border-radius: 20px;
+    
 }
 
 
 strong{
-    color:var(--color-principal); /* Cambia este color a tu preferencia */
-    font-size: 1.5rem; 
+    color:var(--color-blanco); /* Cambia este color a tu preferencia */
+    font-size: 1.7rem; 
     font-family: var(--fuente-monstserrat);
     text-align: center;
     display: block; 
+    position: relative;
+    z-index: 2; 
 }
 
 .quienes-somos p{
-    font-size: 1rem; 
+    font-size: 1.2rem; 
     font-family: var(--fuente-monstserrat);
     line-height: 1.8; 
     margin-top: 3rem; /* Añade un pequeño espacio arriba del párrafo */
-    color: var(--color-negro);
+    color: var(--color-blanco);
     text-align: justify;
+    position: relative;
+    z-index: 2; 
 }
 
 .ingenieros {
@@ -62,16 +85,15 @@ strong{
 /*Main container2*/
 
 .nosotros-container2{
-    background-color: rgba(198, 199, 203, 0.5);
+
     width: auto;
-    height: 300px;
+    height: 250px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start; 
-    padding-top: 5%;  
-    padding-left: 10%;  
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 8%; 
+    padding-left: 10%; 
     padding-right: 10%; 
-    padding-bottom: 2%; 
     gap: 10%;
 }
 h3{
@@ -95,9 +117,10 @@ h3{
 }
 
 .linea {
-    height: 100%;  /* Altura total para que ocupe todo el espacio disponible */
+    height: 70%;  /* Altura total para que ocupe todo el espacio disponible */
     width: 5px;    /* Ancho de la línea */
     background-color: #9B9296 ; /* Color blanco */
+    margin-top: -25px;
     
 }
 
@@ -106,8 +129,126 @@ h3{
     width: auto;
     height: 620px;
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    padding: 2% 10%;
-    gap: 10%;
+    justify-content:flex-start;
+    flex-direction: column;
+    padding: 0% 10%;
+    gap: 7%;
+    align-items: center;  /* Para centrar los otros elementos */
+}
+
+.text-valores   {
+    margin-bottom: 3%;
+}
+.card-valores{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    gap:3%;
+
+}
+
+.card2 {
+    position: relative;
+    width: 25%;
+    height: 350px;
+    margin: 0 auto;
+    border: 1px solid #cdc7c7;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover; /* La imagen cubrirá todo el contenedor */
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/ingenieros.png'); 
+}
+
+
+.card2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.card2:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1); /* Corregido el valor de scale */
+  
+}
+  
+ .first-content {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+   
+} 
+  
+.card2:hover .first-content {
+    height: 0px;
+    opacity: 0;
+
+    
+}
+
+.second-content {
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 0.4s;
+    transform: rotate(90deg) scale(-1);
+    position: relative;
+    z-index: 2; 
+    color: var(--color-blanco);
+    padding:0% 5%;  
+    font-family: var(--fuente-monstserrat);
+    background: rgba(0, 0, 0, 0.5); 
+
+  }
+  
+.card2:hover .second-content {
+    opacity:1;
+    height: 100%;
+    font-size: 1rem;
+    transform: rotate(0deg);
+    text-align:justify;
+    line-height: 1.6;
+
+}
+
+
+.titulo-valores {
+    position: relative;
+    z-index: 2; 
+    font-size: 1.5rem;
+    color: var(--color-blanco);
+    font-weight: bold;
+    text-align: center;
+    padding:0% 5%;  
+    font-family: var(--fuente-monstserrat);
+}
+
+.icono-valores  {
+    width: 30%;
+    border-radius: 100%;
+  
 }
