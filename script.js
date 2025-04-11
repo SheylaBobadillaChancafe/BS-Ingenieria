@@ -13,43 +13,75 @@ function isElementInViewport(el) {
     return rect.top <= window.innerHeight && rect.bottom >= 0;
 }
 
-//PAGINA INICIO
-// Función para agregar la clase de animación cuando se haga scroll
+
 function handleScroll() {
-    // Animar los textos en .text-container2
+    // INICIO
+
+    // Animar textos en .text-container2
     const textContainer = document.querySelector('.text-container2');
-    if (isElementInViewport(textContainer)) {
+    if (textContainer && isElementInViewport(textContainer)) {
         const textElements = textContainer.querySelectorAll('.text');
-        textElements.forEach(element => {
-            element.classList.add('visible');
+        textElements.forEach(el => {
+            if (!el.classList.contains('visible')) {
+                el.classList.add('visible');
+            }
         });
 
         const iconElements = textContainer.querySelectorAll('.iconos-container2');
-        iconElements.forEach(element => {
-            element.classList.add('visible');
+        iconElements.forEach(el => {
+            if (!el.classList.contains('visible-iconos')) {
+                el.classList.add('visible-iconos');
+            }
         });
     }
 
-        // Animar el <h2> en .inicio-container3
-        const container3 = document.querySelector('.inicio-container3');
-        if (isElementInViewport(container3)) {
-            const heading = container3.querySelector('.text-servicios');
-            heading.classList.add('visible');
+    // Animar .text-servicios en .inicio-container3
+    const container3 = document.querySelector('.inicio-container3');
+    if (container3 && isElementInViewport(container3)) {
+        const servicios = container3.querySelector('.text-servicios');
+        if (servicios && !servicios.classList.contains('visible-servicios')) {
+            servicios.classList.add('visible-servicios');
         }
-
-    // Animar el <h2> en .inicio-container3
-    const container4 = document.querySelector('.inicio-container4');
-    if (isElementInViewport(container4)) {
-        const heading = container4.querySelector('.text-proyectos');
-        heading.classList.add('visible');
     }
 
-    
+    // Animar .text-proyectos en .inicio-container4
+    const container4 = document.querySelector('.inicio-container4');
+    if (container4 && isElementInViewport(container4)) {
+        const proyectos = container4.querySelector('.text-proyectos');
+        if (proyectos && !proyectos.classList.contains('visible-proyectos')) {
+            proyectos.classList.add('visible-proyectos');
+        }
+    }
+
+    // NOSOTROS
+
+    // Animar .mision y .vision cuando .nosotros-container2 entra en viewport
+    const containerNosotros2 = document.querySelector('.nosotros-container2');
+    if (containerNosotros2 && isElementInViewport(containerNosotros2)) {
+        const mision = containerNosotros2.querySelector('.mision');
+        if (mision && !mision.classList.contains('visible-left')) {
+            mision.classList.add('visible-left');
+        }
+
+        const vision = containerNosotros2.querySelector('.vision');
+        if (vision && !vision.classList.contains('visible-right')) {
+            vision.classList.add('visible-right');
+        }
+    }
+
+    // Animar .text-valores cuando .nosotros-container3 entra en viewport
+    const containerNosotros3 = document.querySelector('.nosotros-container3');
+    if (containerNosotros3 && isElementInViewport(containerNosotros3)) {
+        const valores = containerNosotros3.querySelector('.text-valores');
+        if (valores && !valores.classList.contains('visible-fade')) {
+            valores.classList.add('visible-fade');
+        }
+    }
 }
+
 // Ejecutar la función handleScroll cuando se haga scroll
 window.addEventListener('scroll', handleScroll);
 
 // También ejecutamos handleScroll en caso de que los contenedores ya estén visibles al cargar la página
 window.addEventListener('load', handleScroll);
 
-//PAGINA NOSOTROS

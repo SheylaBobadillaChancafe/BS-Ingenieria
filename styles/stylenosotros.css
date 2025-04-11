@@ -48,6 +48,8 @@ main {
     font-weight: 500;
     background: rgba(155, 146, 150, 0.3);
     border-radius: 20px; 
+    animation: fadeInUpText 1.5s ease forwards;  
+    
 }
 
 
@@ -100,13 +102,53 @@ h3{
     font-family: var(--fuente-monstserrat);
 }
 
-.mision {
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.mision{
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.mision p{
+
+.mision.visible-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.vision{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+}
+
+.vision.visible-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.mision p, .vision p{
     text-align: justify;
     margin-top: 5%;
     line-height: 1.6;
@@ -135,7 +177,14 @@ h3{
 
 .text-valores   {
     margin-bottom: 3%;
+    opacity: 0;
 }
+
+.text-valores.visible-fade {
+    animation: fadeInUpText 1s ease-out forwards;
+}
+
+
 .card-valores{
     display: flex;
     justify-content:space-between;
@@ -148,7 +197,7 @@ h3{
 
 .card2 {
     position: relative;
-    width: 25%;
+    width: 300px;
     height: 350px;
     margin: 0 auto;
     border: 1px solid #cdc7c7;
@@ -248,4 +297,87 @@ h3{
     width: 30%;
     border-radius: 100%;
   
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    /*Container1*/
+    .nosotros-container1 {
+        height: 500px; 
+        padding: 0% 0%;
+        justify-content: center; /* Centrar el contenido */
+    }
+
+    .quienes-somos {
+        width: 80%; /* Aumentar el ancho del contenedor de texto */
+        height:auto; /* Ajustar la altura automáticamente */
+    }
+
+    strong {
+        font-size: 1.5rem; 
+
+    }
+  
+
+    .quienes-somos p {
+        line-height: 1.4; 
+        margin-top: 5%;
+        font-size: 1rem; 
+    }
+
+    
+    /*Container3*/
+
+    .nosotros-container3 {
+        width: auto;
+        height: auto;
+        padding: 0% 5%;  
+        gap: 30px;
+        margin: 50px 0px;   
+    }
+  
+    .card-valores{
+        display: flex;
+        justify-content: space-around;  
+        width: 90%;  
+        flex-wrap: wrap;  
+        gap: 30px;  
+        margin: 0px 0px;  
+    }
+
+    .card2{
+        width: 300px;
+        height: 300px;     
+        margin: 0px 0px;  
+    }
+}
+
+@media screen and (max-width: 700px) {
+     /*Container2*/
+
+    .nosotros-container2 {
+        flex-direction: column; 
+        align-items: center;
+        gap: 10%; 
+        height: auto; 
+        padding: 5% 5%;
+        margin-top: 8%;
+        margin-bottom: 8%;
+      }
+
+    
+
+      .linea {
+        width: 80%;      
+        height: 3px;     
+        margin: 20px 0;  
+      }
+    
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 5%;
+      }
+
+
 }
