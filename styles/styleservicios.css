@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 main {
     max-width: 100%; 
@@ -17,13 +16,14 @@ main {
     justify-content:space-around;
     align-items:center;
     padding: 0% 5% ;
-    /* Imagen de fondo */
-    background-image: url('../img/servicios.png'); 
+    background-image: url('../img/portadaservicios.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative; /* Necesario para colocar el pseudo-elemento ::after */
 }
+
+
 
 /* Pseudo-elemento para agregar la capa oscura con transparencia */
 .servicios-container1::after {
@@ -37,8 +37,6 @@ main {
     z-index: 1; 
 }
 .servicio-slogan {
-
-    /* Esto asegura que el contenido dentro de este div esté encima del pseudo-elemento */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +46,6 @@ main {
     padding:5%; 
     position: relative;
     font-weight: 500;
-
     border-radius: 20px;
     
 }
@@ -62,6 +59,7 @@ strong{
     display: block; 
     position: relative;
     z-index: 2; 
+    animation: fadeInUpText 1.5s ease forwards; 
 }
 
 /*container2*/
@@ -70,7 +68,7 @@ strong{
     flex-direction: column;
     justify-content: space-between; /* Asegura que los elementos empiecen desde la parte superior */
     align-items: center;
-    padding: 8% 15%;
+    padding: 8% 10%;
     width: 100%;
     gap: 90px; /* Ajuste para el espacio entre los elementos */
     height: auto; /* La altura se ajustará automáticamente al contenido */
@@ -80,18 +78,23 @@ strong{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15%;
+    gap: 8%;
 }
 
 .imgservicios {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 70%;
+    height:320px;
 }
 
+
+
 .imgservicios img {
-    width: 90%;
-    height: auto;
+    width:70%;
+    height: 320px;
+    border-radius: 8px;
 }
 
 .text-servicio1 {
@@ -99,19 +102,53 @@ strong{
     flex-direction: column; /* Los elementos estarán uno debajo del otro */
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
     gap: 20px; /* Ajustar el espacio entre los elementos */
 }
 
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de texto (derecha) */
+@keyframes fadeInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.visible-left-imgservicios {
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+.visible-right-textservicio1 {
+    animation: fadeInRight 1s ease-out forwards;
+}
+
+.t-titulo{
+    text-align: center;
+}
 .titulo-servicio {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
 }
 
 .icono-valores {
-    width: 10%;
+    width: 8%;
     border-radius: 100%;
 }
 
@@ -137,3 +174,66 @@ strong{
     line-height: 1.6;
     text-align: justify;
 }
+
+.solicitar-cotizacion{
+    text-decoration: none;
+    font-weight:500;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    padding: 0.625rem 1.25rem; 
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    font-family: var(--fuente-monstserrat);
+}
+
+.solicitar-cotizacion:hover {
+    background-color: #9B9296;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1080px) {
+
+    /*Container1*/
+    .servicios-container1 { 
+        padding: 0% 0%;
+        justify-content: center; /* Centrar el contenido */
+    }
+
+    .servicio-slogan{
+        width: 80%;
+        padding: 0%;
+    }
+
+    .s-container2{
+        gap: 50px; 
+    }
+
+}
+
+@media screen and (max-width: 775px) {
+    /*Container2*/
+
+    .servicios-container2{
+        padding: 8% 13%;
+
+    }
+    .s-container2{
+        display: flex;
+        flex-direction:column-reverse;
+        gap: 30px; 
+
+    }
+
+   .imgservicios {
+
+        width: 90%;
+        height: 80%;
+      
+    } 
+
+    .imgservicios img {
+        width:100%;
+
+
+    }
+} 

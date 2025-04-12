@@ -137,6 +137,11 @@ header {
     color: var(--color-negro);
 }
 
+.menu li a.active::after, 
+.menu li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 
 #whatsapp-icon {
     position: fixed;        
@@ -455,15 +460,15 @@ h2{
   }
   
 .card-1 {
-    background-image: url('../img/imagen01.png'); 
+    background-image: url('../img/servicio1.png'); 
   }
   
 .card-2 {
-    background-image: url('../img/imagen02.png');
+    background-image: url('../img/servicio2.png');
   }
   
 .card-3 {
-    background-image: url('../img/imagen03.png');
+    background-image: url('../img/servicio3.png');
   }
   
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 main {
     max-width: 100%; 
@@ -96,7 +96,7 @@ strong{
 }
 
 h3{
-    color:var(--color-principal); /
+    color:var(--color-principal); 
     margin-bottom: 10%; 
     font-size: 1.6rem; 
     font-family: var(--fuente-monstserrat);
@@ -364,9 +364,7 @@ h3{
         padding: 5% 5%;
         margin-top: 8%;
         margin-bottom: 8%;
-      }
-
-    
+    }
 
       .linea {
         width: 80%;      

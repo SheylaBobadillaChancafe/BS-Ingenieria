@@ -8,6 +8,25 @@ menuToggle.addEventListener('click', () => {
 });
 
 
+
+// Script para agregar la clase "active" al enlace correspondiente en función de la página actual
+document.addEventListener("DOMContentLoaded", function() {
+    const currentLocation = window.location.pathname; // Obtiene la ruta de la URL
+
+    // Obtiene todos los enlaces del menú
+    const menuLinks = document.querySelectorAll('.nav .menu li a');
+
+    menuLinks.forEach(link => {
+        // Excluye el enlace de "Contacto" de la clase "active"
+        if (link.getAttribute('href') !== "contactanos.html") {  // Modifica el href si tu ruta es diferente
+            if (currentLocation.includes(link.getAttribute('href'))) {
+                link.classList.add('active');  // Añade la clase "active"
+            }
+        }
+    });
+});
+
+
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
     return rect.top <= window.innerHeight && rect.bottom >= 0;
@@ -77,7 +96,28 @@ function handleScroll() {
             valores.classList.add('visible-fade');
         }
     }
+
+ 
+ // SERVICIOS
+    const containersServicios2 = document.querySelectorAll('.s-container2'); // Selecciona todos los elementos con la clase '.s-container2'
+        
+    containersServicios2.forEach(container => { // Itera sobre cada elemento encontrado
+        if (isElementInViewport(container)) {  // Verifica si el contenedor está en el viewport
+            // Animación para imagen (aparece desde la izquierda)
+            const imgservicios = container.querySelector('.imgservicios');
+            if (imgservicios && !imgservicios.classList.contains('visible-left-imgservicios')) {
+                imgservicios.classList.add('visible-left-imgservicios');  // Agrega la clase para la animación de la imagen
+            }
+
+            // Animación para texto (aparece desde la derecha)
+            const textservicios = container.querySelector('.text-servicio1');
+            if (textservicios && !textservicios.classList.contains('visible-right-textservicio1')) {
+                textservicios.classList.add('visible-right-textservicio1');  // Agrega la clase para la animación del texto
+            }
+        }
+    });
 }
+
 
 // Ejecutar la función handleScroll cuando se haga scroll
 window.addEventListener('scroll', handleScroll);
