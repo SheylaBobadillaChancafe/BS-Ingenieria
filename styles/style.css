@@ -697,7 +697,7 @@ h2{
     .menu-toggle {
         display: block;
         cursor: pointer;
-        z-index: 1001;  /
+        z-index: 1001;  
     }
 
     .menu-toggle i {
