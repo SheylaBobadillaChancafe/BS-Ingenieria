@@ -97,11 +97,6 @@ form{
     line-height: 1.5; 
 
   }
-
-  textarea::placeholder {
-
-    
-  }
   
   .submit-button {
     width: 100%;
