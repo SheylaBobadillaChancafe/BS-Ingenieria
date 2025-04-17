@@ -125,3 +125,21 @@ window.addEventListener('scroll', handleScroll);
 // También ejecutamos handleScroll en caso de que los contenedores ya estén visibles al cargar la página
 window.addEventListener('load', handleScroll);
 
+
+
+
+
+// Mostrar el modal
+function showModal() {
+    document.getElementById("successModal").style.display = "flex";  // Mostrar el modal
+}
+
+// Cerrar el modal
+function closeModal() {
+    document.getElementById("successModal").style.display = "none";  // Cerrar el modal
+}
+
+// Recargar la página después de que el modal se haya cerrado
+function reloadPage() {
+    location.reload();  // Recargar la página
+}

@@ -74,6 +74,17 @@
                     </form>
                 </div>
             </div>
+
+            <!-- Modal de éxito -->
+            <div id="successModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>¡Tu mensaje se ha enviado con éxito!</h2>
+                    <button onclick="reloadPage()">Aceptar</button>
+                </div>
+            </div>
+
+
         </section>
 
     </main>
@@ -108,6 +119,14 @@
         </div>
  
     </footer>
+
+        <div id="successModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>¡Tu mensaje se ha enviado con éxito!</h2>
+                <button onclick="reloadPage()">Aceptar</button>
+            </div>
+        </div>
     <script src="script.js"></script>
 </body>
 </html>
