@@ -84,18 +84,6 @@ form{
 
   }
   
-
-
-/* 
-  .input-group.right {
-   display: flex;
-   justify-items: center;
-  }
-   */
- 
-  /* .input-group i.icon {
-    margin-right: 6px;
-  } */
   
   input {
     width: 100%;
@@ -152,56 +140,78 @@ form{
   }
 
 
-/* 
-  .modal {
-    display: none; 
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+
+/* Personalizar el SweetAlert */
+.swal2-popup {
+  border-radius: 15px;  /* Borde redondeado */
+  background-color: var(--color-blanco);  /* Fondo blanco */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+  font-family: var(--fuente-monstserrat); /* Fuente personalizada */
+  padding: 25px 30px;  /* Relleno interno */
+  display: flex;
+  gap: 5px;
 }
 
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
+/* Título del SweetAlert */
+.swal2-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #00bcd4;  /* Color del título (puedes ajustarlo según el diseño) */
+  margin-bottom: 15px;  /* Espacio debajo del título */
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+/* Ícono del SweetAlert */
+.swal2-icon {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;     /* Centrar verticalmente */
+  font-size: 15px;         /* Tamaño del ícono */
+  color: #28a745;          /* Color del ícono (verde para éxito) */
+  width: 80px;             /* Ancho del contenedor del ícono */
+  height: 80px;            /* Altura del contenedor del ícono */
+  border-radius: 50%;      /* Hacer el contenedor circular */
+  background-color: #e4f9e2; /* Fondo del ícono, puedes ajustarlo */
+  margin: 0 auto;          /* Centrar el ícono dentro del SweetAlert */
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+/* Botón de Confirmación */
+.swal2-confirm {
+  background-color: #00bcd4;  /* Fondo color azul */
+  color: white;  /* Texto blanco */
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    text-align: center;
+/* Efecto hover en el botón */
+.swal2-confirm:hover {
+  background-color: #007b8c;  /* Cambio de color en hover */
 }
 
-button:hover {
-    background-color: #45a049;
+/* Estilo para el texto de error si es necesario */
+.swal2-error {
+  color: #dc3545;  /* Rojo para el error */
 }
- */
 
+/* Personalización para el fondo de la alerta (puedes cambiar el color si prefieres) */
+.swal2-container {
+  z-index: 9999;  /* Asegúrate de que esté por encima de otros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+  
 
 
 @media screen and (max-width: 1080px) {

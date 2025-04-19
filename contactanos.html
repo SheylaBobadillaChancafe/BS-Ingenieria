@@ -7,6 +7,8 @@
     <link rel="stylesheet" href=".\styles\style.css">
     <link rel="stylesheet" href=".\styles\stylecontacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
     
@@ -43,7 +45,7 @@
             <div class="form-container">
                 <h2>¡Contáctanos!</h2>
                 <div class="form-content">
-                    <form action="enviar-correo.php" method="POST">
+                    <form id="contactForm" action="enviar-correo.php" method="POST">
                         <div class="grupo">
                             <div class="input-group">
                                 <label> Nombres Completos</label>
@@ -72,6 +74,7 @@
                             <button type="submit"> Enviar</button>
                         </div>
                     </form>
+                    
                 </div>
             </div>
 

@@ -125,3 +125,85 @@ window.addEventListener('scroll', handleScroll);
 // También ejecutamos handleScroll en caso de que los contenedores ya estén visibles al cargar la página
 window.addEventListener('load', handleScroll);
 
+
+
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir el comportamiento por defecto de recargar la página
+
+    const formData = new FormData(this);
+
+    // Usar fetch para enviar los datos sin recargar la página
+    fetch('enviar-correo.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        // Si el correo fue enviado correctamente
+        if (data.includes('success')) {
+            Swal.fire({
+                icon: 'success',
+                title: '¡Mensaje enviado con éxito!',
+                showConfirmButton: false,
+                timer: 3000,  // Ajusta el tiempo a 3 segundos (3000 milisegundos)
+                customClass: {
+                    popup: 'swal2-popup',  // Clase personalizada para el popup
+                    title: 'swal2-title',  // Clase personalizada para el título
+                    icon: 'swal2-icon',  // Clase personalizada para el ícono
+                    confirmButton: 'swal2-confirm'  // Clase personalizada para el botón de confirmación
+                }
+            }).then(function() {
+                window.location.reload(); // Recargar la página
+            });
+        } else {
+            // Si hubo un error
+            Swal.fire({
+                icon: 'error',
+                title: '¡Hubo un problema!',
+                text: 'No se pudo enviar el mensaje.',
+                customClass: {
+                    popup: 'swal2-popup',  // Clase personalizada para el popup
+                    title: 'swal2-title',  // Clase personalizada para el título
+                    icon: 'swal2-icon',  // Clase personalizada para el ícono
+                    confirmButton: 'swal2-confirm'  // Clase personalizada para el botón de confirmación
+                }
+            });
+        }
+    })
+    .catch(error => {
+        // Manejar errores de AJAX
+        Swal.fire({
+            icon: 'error',
+            title: '¡Hubo un error!',
+            text: 'No se pudo enviar el mensaje.',
+            customClass: {
+                popup: 'swal2-popup',  // Clase personalizada para el popup
+                title: 'swal2-title',  // Clase personalizada para el título
+                icon: 'swal2-icon',  // Clase personalizada para el ícono
+                confirmButton: 'swal2-confirm'  // Clase personalizada para el botón de confirmación
+            }
+        });
+    });
+});
+
+
+
+
+
+// Muestra el SweetAlert para ver cómo queda con tu CSS
+// Swal.fire({
+//     icon: 'success',
+//     title: '¡Mensaje de prueba!',
+//     text: 'Este es un mensaje de prueba para ver cómo queda el estilo de SweetAlert.',
+//     showConfirmButton: true,
+//     confirmButtonText: 'Aceptar',
+//     background: '#ffffff',  // Fondo blanco para el alert
+//     customClass: {
+//         popup: 'custom-popup',
+//         title: 'custom-title',
+//         icon: 'custom-icon',
+//         confirmButton: 'custom-confirm-button'
+//     }
+// });
