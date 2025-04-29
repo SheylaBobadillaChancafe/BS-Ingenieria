@@ -1,0 +1,249 @@
+main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*Main container1*/
+.servicios-container1 {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 325px;
+    overflow: hidden;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0% 5%;
+    background-image: url('../img/portadanosotros2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.servicios-container1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(59, 99, 151, 0.1);
+    z-index: 1;
+}
+
+.servicio-slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 5%;
+    position: relative;
+
+}
+
+
+.servicio-slogan p {
+    color: var(--color-blanco);
+    font-size: 2.2rem;
+    font-family: var(--fuente-monstserrat);
+    font-weight: 700;
+    line-height: 1.7;
+    text-align: center;
+    display: block;
+    position: relative;
+    z-index: 2;
+    animation: fadeInUpText 1.5s ease forwards;
+}
+
+/*container2*/
+.servicios-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8% 10%;
+    width: 100%;
+    gap: 90px;
+    height: auto;
+}
+
+.s-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.imgservicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 320px;
+}
+
+
+
+.imgservicios img {
+    width: 60%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.text-servicio1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 20px;
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.visible-left-imgservicios {
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+.visible-right-textservicio1 {
+    animation: fadeInRight 1s ease-out forwards;
+}
+
+
+
+.titulo-servicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    gap: 20px;
+}
+
+.t-titulo {
+    text-align: center;
+}
+
+.icono-valores {
+    width: 8%;
+    border-radius: 100%;
+}
+
+
+
+.parrafo-servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    gap: 40px;
+}
+
+.parrafo-servicios p {
+    font-size: 1rem;
+    font-family: var(--fuente-monstserrat);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.solicitar-cotizacion {
+    text-decoration: none;
+    font-weight: 500;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    padding: 0.625rem 1.25rem;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    font-family: var(--fuente-monstserrat);
+}
+
+.solicitar-cotizacion:hover {
+    background-color: #9B9296;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1080px) {
+
+    /*Container1*/
+    .servicios-container1 {
+        padding: 0% 0%;
+        justify-content: center;
+    }
+
+    .servicio-slogan {
+        width: 80%;
+        padding: 0%;
+    }
+
+    .servicio-slogan p {
+        line-height: 1.3;
+    }
+
+    .s-container2 {
+        gap: 50px;
+    }
+
+    .imgservicios img {
+        width: 250px;
+        height: 300px;
+
+
+    }
+}
+
+@media screen and (max-width: 775px) {
+    /*Container2*/
+
+    .servicios-container2 {
+        padding: 15% 8%;
+
+    }
+
+    .s-container2 {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .text-servicio1 {
+        width: 100%;
+    }
+
+
+    .imgservicios {
+        width: 90%;
+        height: 80%;
+    }
+
+    .imgservicios img {
+        width: 250px;
+        height: 300px;
+    }
+}

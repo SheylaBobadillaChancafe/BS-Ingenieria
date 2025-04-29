@@ -1,0 +1,172 @@
+main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*container1*/
+.proyectos-container1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    padding: 0% 18%;
+
+}
+
+.titulo-proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    
+}
+
+.titulo-proyectos span {
+    color: var(--color-principal);
+    margin-bottom: 10%;
+    font-size: 1.6rem;
+    font-family: var(--fuente-monstserrat);
+    line-height: 1.4;
+ 
+ 
+}
+
+.titulo-proyectos p {
+    Font-size: 1rem;
+    font-family: var(--fuente-monstserrat);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+/*container2*/
+
+.proyectos-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 5%;
+    gap: 70px;
+}
+
+.proyecto01 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+h3 {
+    color: var(--color-negro);
+    margin-bottom: 10%;
+    font-size: 1.4rem;
+    font-family: var(--fuente-monstserrat)
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    width: 90%;
+}
+
+.div1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+}
+
+.div2 {
+    grid-column: span 4 / span 4;
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 6;
+    grid-row-start: 3;
+}
+
+
+.div1,
+.div2,
+.div3,
+.div4 {
+    position: relative;
+}
+
+
+.imgproyect1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+.parent2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    width: 90%;
+}
+
+.div5 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+}
+
+.div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+}
+
+.div5,
+.div6 {
+    position: relative;
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    /*Container1*/
+    .proyectos-container1 {
+        width: 100%;
+        height: auto;
+        padding: 5% 10%;
+        gap: 20px;
+    }
+
+    .proyectos-container2 {
+        height: 100%;
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 15%;
+    }
+
+    .parent1,
+    .parent2 {
+        width: 100%;
+    }
+
+}
