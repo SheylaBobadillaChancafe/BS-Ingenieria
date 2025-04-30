@@ -189,6 +189,13 @@ button {
   transition: background 0.3s ease;
 }
 
+.swal2-icon-error .swal2-x-mark {
+  margin-top: -80px;
+  font-size: 1rem;
+  animation: none !important;  /* Desactivar la animación */
+  transition: none !important; /* Asegurar que no haya transición */
+}
+
 
 .swal2-confirm:hover {
   background-color: #007b8c;
