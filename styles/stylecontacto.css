@@ -173,7 +173,7 @@ button {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color:var(--color-blanco);
+  background-color: var(--color-blanco);
   margin: 0 auto;
 }
 
@@ -190,8 +190,8 @@ button {
 }
 
 .swal2-icon-error .swal2-x-mark {
-  margin-top: -80px;
   background-color: var(--color-blanco);
+  margin-top: -80px;
   font-size: 1rem;
   animation: none !important;  /* Desactivar la animación */
   transition: none !important; /* Asegurar que no haya transición */

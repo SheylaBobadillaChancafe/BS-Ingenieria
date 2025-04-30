@@ -36,7 +36,9 @@ document.getElementById('contactForm').addEventListener('submit', function (even
             Swal.fire({
                 icon: 'error',
                 title: '¡Hubo un problema!',
-                text: 'No se pudo enviar el mensaje.'
+                text: 'No se pudo enviar el mensaje.',
+                showConfirmButton: false,
+                timer: 2000
             });
         }
     })
@@ -45,7 +47,9 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         Swal.fire({
             icon: 'error',
             title: '¡Hubo un error!',
-            text: 'No se pudo enviar el mensaje.'
+            text: 'No se pudo enviar el mensaje.',
+            showConfirmButton: false,
+            timer: 2000
         });
     });
 });
